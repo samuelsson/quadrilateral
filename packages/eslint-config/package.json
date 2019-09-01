@@ -1,0 +1,9 @@
+{
+  "name": "eslint-config",
+  "version": "0.1.0",
+  "description": "eslint and prettier config for all Rektangel projects",
+  "main": "index.js",
+  "repository": "/eslint-config",
+  "author": "@ErikSamuelsson",
+  "license": "MIT"
+}

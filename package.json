@@ -5,16 +5,11 @@
     "packages/*"
   ],
   "scripts": {
-    "compile": "lerna run compile",
-    "clean": "lerna run clean",
-    "lint": "lerna run lint",
-    "test": "lerna run test"
+    "bootstrap": "lerna bootstrap",
+    "clean": "lerna clean"
   },
   "devDependencies": {
     "lerna": "^3.16.4",
-    "react": "^16.9.0",
-    "react-dom": "^16.9.0",
-    "styled-components": "^4.3.2",
     "typescript": "^3.6.2"
   }
 }

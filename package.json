@@ -6,7 +6,8 @@
   ],
   "scripts": {
     "bootstrap": "lerna bootstrap",
-    "clean": "lerna clean"
+    "clean": "lerna clean",
+    "ladd": "lerna add"
   },
   "devDependencies": {
     "@commitlint/cli": "^8.1.0",

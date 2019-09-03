@@ -1,6 +1,14 @@
 {
-  "name": "root",
+  "name": "quadrilateral",
+  "description": "Monorepo for Rektangel code",
+  "version": "1.0.0",
   "private": true,
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/Rektangel/quadrilateral.git"
+  },
+  "license": "MIT",
+  "homepage": "https://rektangel.se/",
   "workspaces": [
     "packages/*"
   ],

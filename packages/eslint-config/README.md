@@ -2,21 +2,32 @@
 
 This is for projects with TypeScript, Prettier and React.
 
-Guide for setting up was [here](https://github.com/typescript-eslint/typescript-eslint/tree/master/packages/eslint-plugin).
+## Installation
 
-## Making eslint and prettier work together
+Install the package with
 
-With the package `eslint-config-prettier` we can add:
+```shell
+yarn add --dev @rektangel/eslint-config
+```
+
+Then we only need to add this to our `.eslintrc`:
+
+```json
+{
+  "extends": "@rektangel/eslint-config"
+}
+```
+
+You also need to set some prettier rules. Create a `.prettierrc` in the root directory and add this:
 
 ````json
 {
-  "extends": ["plugin:prettier/recommended"]
+  "semi": true,
+  "singleQuote": true,
+  "trailingComma": "es5"
 }
 ````
 
-This does the following (which means we don't need to set them ourselves):
+## Usage
 
-* Enables eslint-plugin-prettier.
-* Sets the prettier/prettier rule to "error".
-* Extends the eslint-config-prettier configuration.
-
+Enable `eslint` linting in your IDE or run `yarn run eslint ./ --ext .ts,.tsx,.js` in the terminal.

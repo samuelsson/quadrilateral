@@ -7,6 +7,12 @@ module.exports = {
     'plugin:import/typescript',
     'plugin:jsx-a11y/recommended',
     'prettier/@typescript-eslint',
+
+    // This extension does the following so we don't have to set it manually:
+    // - Enables eslint-plugin-prettier under `plugins`.
+    // - Sets the prettier/prettier to "error" under `rules`.
+    // - Extends the eslint-config-prettier configuration - turn of ESLint
+    //   rules that might conflict with Prettier.
     'plugin:prettier/recommended',
   ],
   plugins: ['@typescript-eslint'],

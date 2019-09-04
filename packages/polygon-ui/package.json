@@ -5,6 +5,9 @@
   "main": "index.js",
   "author": "@ErikSamuelsson",
   "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
   "scripts": {
     "lint": "tsc --noEmit && eslint ./ --ext .ts,.tsx,.js",
     "start": "start-storybook",

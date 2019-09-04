@@ -3,7 +3,6 @@
   "version": "0.3.0",
   "description": "UI library for Rektangel",
   "main": "index.js",
-  "repository": "/polygon-ui",
   "author": "@ErikSamuelsson",
   "license": "MIT",
   "scripts": {

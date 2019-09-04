@@ -4,22 +4,28 @@
   "description": "eslint and prettier config for all Rektangel projects",
   "main": "index.js",
   "files": [
-    "index.js"
+    "index.js",
+    "README.md",
+    "CHANGELOG.md",
+    "LICENSE"
   ],
-  "repository": "/eslint-config",
   "author": "@ErikSamuelsson",
   "license": "MIT",
   "dependencies": {
     "@typescript-eslint/eslint-plugin": "^2.1.0",
     "@typescript-eslint/parser": "^2.1.0",
-    "eslint": "^6.1.0",
+    "eslint": "^6.3.0",
     "eslint-config-airbnb": "^18.0.1",
-    "eslint-config-prettier": "^6.1.0",
+    "eslint-config-prettier": "^6.2.0",
     "eslint-plugin-import": "^2.18.2",
     "eslint-plugin-jsx-a11y": "^6.2.3",
     "eslint-plugin-prettier": "^3.1.0",
     "eslint-plugin-react": "^7.14.3",
     "eslint-plugin-react-hooks": "^1.7.0",
+    "prettier": "^1.18.2"
+  },
+  "peerDependencies": {
+    "eslint": "^6.3.0",
     "prettier": "^1.18.2"
   }
 }

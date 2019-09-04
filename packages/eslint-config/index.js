@@ -3,6 +3,7 @@ module.exports = {
   parser: '@typescript-eslint/parser',
   extends: [
     'airbnb',
+    'airbnb/hooks',
     'plugin:@typescript-eslint/recommended',
     'plugin:import/typescript',
     'plugin:jsx-a11y/recommended',
@@ -22,7 +23,6 @@ module.exports = {
     'react/jsx-filename-extension': ['error', { extensions: ['.tsx'] }],
   },
   env: {
-    node: true,
     es6: true,
     browser: true,
     jest: true,

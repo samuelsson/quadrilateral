@@ -11,6 +11,10 @@
   ],
   "author": "@ErikSamuelsson",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/Rektangel/quadrilateral.git"
+  },
   "publishConfig": {
     "access": "public"
   },
@@ -30,5 +34,9 @@
   "peerDependencies": {
     "eslint": "^6.3.0",
     "prettier": "^1.18.2"
-  }
+  },
+  "keywords": [
+    "eslint",
+    "eslint-config"
+  ]
 }

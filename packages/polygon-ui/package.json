@@ -5,6 +5,10 @@
   "main": "index.js",
   "author": "@ErikSamuelsson",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/Rektangel/quadrilateral.git"
+  },
   "publishConfig": {
     "access": "public"
   },
@@ -33,5 +37,9 @@
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
     "styled-components": "^4.3.2"
-  }
+  },
+  "keywords": [
+    "react",
+    "react-component"
+  ]
 }

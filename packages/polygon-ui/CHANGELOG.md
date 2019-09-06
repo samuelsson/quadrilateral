@@ -5,17 +5,11 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 # 0.3.0 (2019-09-04)
 
-
 ### Features
 
 * 🎸 add an eslint-config for TypeScript ([be34160](http:///polygon-ui/commits/be34160))
 
-
-
-
-
 # 0.2.0 (2019-09-03)
-
 
 ### Features
 

@@ -4,13 +4,19 @@ This is for projects with TypeScript, Prettier and React.
 
 ## Installation
 
-Install the package with
+First we need to make sure we have all peer dependencies installed:
+
+```shell
+npx install-peerdeps --dev @rektangel/eslint-config
+```
+
+Then we install the actual package with:
 
 ```shell
 yarn add --dev @rektangel/eslint-config
 ```
 
-Then we only need to add this to our `.eslintrc`:
+After that we need to enable the new rule set. Create a `.eslintrc` in the root directory and add this:
 
 ```json
 {
@@ -30,4 +36,4 @@ You also need to set some prettier rules. Create a `.prettierrc` in the root dir
 
 ## Usage
 
-Enable `eslint` linting in your IDE or run `yarn run eslint ./ --ext .ts,.tsx,.js` in the terminal.
+Enable `eslint` linting in your IDE and/or run `yarn run eslint ./ --ext .ts,.tsx,.js` in the terminal.

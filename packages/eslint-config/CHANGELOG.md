@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.1.2](https://github.com/Rektangel/quadrilateral/compare/@rektangel/eslint-config@1.1.1...@rektangel/eslint-config@1.1.2) (2019-09-06)
+
+
+### Bug Fixes
+
+* 🐛 make eslint peerDependencis work in a correct way ([49ed624](https://github.com/Rektangel/quadrilateral/commit/49ed624))
+
+
+
+
+
 ## [1.1.1](https://github.com/Rektangel/quadrilateral/compare/@rektangel/eslint-config@1.1.0...@rektangel/eslint-config@1.1.1) (2019-09-04)
 
 ### Bug Fixes

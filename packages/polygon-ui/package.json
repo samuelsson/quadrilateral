@@ -2,18 +2,25 @@
   "name": "@rektangel/polygon-ui",
   "version": "0.3.1",
   "description": "UI library for Rektangel",
-  "main": "index.js",
   "author": "@ErikSamuelsson",
   "license": "MIT",
   "repository": {
     "type": "git",
     "url": "git://github.com/Rektangel/quadrilateral.git"
   },
+  "main": "dist/index.js",
+  "files": [
+    "dist"
+  ],
+  "types": "dist/types/index.d.ts",
   "publishConfig": {
     "access": "public"
   },
   "scripts": {
+    "build": "tsc",
     "lint": "tsc --noEmit && eslint ./ --ext .ts,.tsx,.js",
+    "prepare": "yarn run build",
+    "prepublishOnly": "yarn run lint && yarn run jest --ci",
     "start": "start-storybook",
     "test": "jest",
     "test:watch": "jest --watch"
@@ -29,14 +36,14 @@
     "@types/storybook__react": "^4.0.2",
     "babel-loader": "^8.0.6",
     "jest": "^24.9.0",
-    "ts-jest": "^24.0.2",
-    "typescript": "^3.6.2"
+    "ts-jest": "^24.0.2"
   },
-  "dependencies": {
-    "prop-types": "^15.7.2",
-    "react": "^16.9.0",
-    "react-dom": "^16.9.0",
-    "styled-components": "^4.3.2"
+  "peerDependencies": {
+    "prop-types": ">=15",
+    "react": ">=16",
+    "react-dom": ">=16",
+    "styled-components": ">=4",
+    "typescript": ">=3"
   },
   "keywords": [
     "react",

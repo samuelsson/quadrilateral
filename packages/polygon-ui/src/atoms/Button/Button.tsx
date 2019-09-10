@@ -92,7 +92,7 @@ const Button: React.FC<ButtonProps> = styled.button<ButtonProps>`
           outlined: !!props.outlined,
         });
     }
-}};
+  }};
 `;
 
 Button.propTypes = buttonPropTypes;

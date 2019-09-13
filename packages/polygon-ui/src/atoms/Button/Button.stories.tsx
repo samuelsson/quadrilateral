@@ -26,30 +26,24 @@ storiesOf('Button', module)
         <Button name="c" theme="danger">
           Danger
         </Button>
-        <Button name="c" theme="warning">
-          Warning
-        </Button>
       </>
     )
   )
   .add(
-    'Outlined',
+    'Bare',
     (): JSX.Element => (
       <>
-        <Button name="a" outlined>
+        <Button name="a" bare>
           Primary
         </Button>
-        <Button name="b" theme="secondary" outlined>
+        <Button name="b" theme="secondary" bare>
           Secondary
         </Button>
-        <Button name="b" theme="success" outlined>
+        <Button name="b" theme="success" bare>
           Success
         </Button>
-        <Button name="c" theme="danger" outlined>
+        <Button name="c" theme="danger" bare>
           Danger
-        </Button>
-        <Button name="c" theme="warning" outlined>
-          Warning
         </Button>
       </>
     )
@@ -69,9 +63,6 @@ storiesOf('Button', module)
         </Button>
         <Button name="c" theme="danger" disabled>
           Danger
-        </Button>
-        <Button name="c" theme="warning" disabled>
-          Warning
         </Button>
       </>
     )

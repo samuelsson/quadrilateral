@@ -1,10 +1,10 @@
 import React from 'react';
 import { render } from '@testing-library/react';
-import Button from './Button';
+import Input from './Input';
 
 describe('<Button />', (): void => {
   it('matches snapshot', (): void => {
-    const { asFragment } = render(<Button name="button">Button</Button>);
+    const { asFragment } = render(<Input name="input" type="text " />);
     expect(asFragment()).toMatchSnapshot();
   });
 });

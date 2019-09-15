@@ -2,12 +2,11 @@
 
 exports[`<Button /> matches snapshot 1`] = `
 <DocumentFragment>
-  <button
-    class="sc-bdVaJa gaMzyQ"
-    name="button"
-    type="button"
-  >
-    Button
-  </button>
+  <input
+    class="sc-bdVaJa fbapII"
+    name="input"
+    placeholder=""
+    type="text "
+  />
 </DocumentFragment>
 `;

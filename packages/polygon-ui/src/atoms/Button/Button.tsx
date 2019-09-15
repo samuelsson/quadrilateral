@@ -31,7 +31,7 @@ const baseStyle = ({
 }: BaseStyle): FlattenSimpleInterpolation => css`
   height: 48px;
   border: none;
-  padding: 1rem 2rem;
+  padding: 0 2rem;
   border-radius: ${variables.borderRadius};
   box-shadow: ${!bare && `0 2px 8px ${colors.gray[300]}`};
   background-color: ${bare ? 'transparent' : background};

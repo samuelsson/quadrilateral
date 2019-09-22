@@ -17,13 +17,13 @@ storiesOf('Button', module)
     (): JSX.Element => (
       <>
         <Button name="a">Primary</Button>
-        <Button name="b" theme="secondary">
+        <Button name="b" appearance="secondary">
           Secondary
         </Button>
-        <Button name="b" theme="success">
+        <Button name="b" appearance="success">
           Success
         </Button>
-        <Button name="c" theme="danger">
+        <Button name="c" appearance="danger">
           Danger
         </Button>
       </>
@@ -36,13 +36,13 @@ storiesOf('Button', module)
         <Button name="a" bare>
           Primary
         </Button>
-        <Button name="b" theme="secondary" bare>
+        <Button name="b" appearance="secondary" bare>
           Secondary
         </Button>
-        <Button name="b" theme="success" bare>
+        <Button name="b" appearance="success" bare>
           Success
         </Button>
-        <Button name="c" theme="danger" bare>
+        <Button name="c" appearance="danger" bare>
           Danger
         </Button>
       </>
@@ -55,13 +55,13 @@ storiesOf('Button', module)
         <Button name="a" disabled>
           Primary
         </Button>
-        <Button name="b" theme="secondary" disabled>
+        <Button name="b" appearance="secondary" disabled>
           Secondary
         </Button>
-        <Button name="b" theme="success" disabled>
+        <Button name="b" appearance="success" disabled>
           Success
         </Button>
-        <Button name="c" theme="danger" disabled>
+        <Button name="c" appearance="danger" disabled>
           Danger
         </Button>
       </>

@@ -18,6 +18,8 @@ yarn add --dev @rektangel/polygon-ui
 
 ## Usage
 
+Polygon-UI is using different themes, a dark and a light version, which means you need to wrap your app in a `ThemeProvider`.
+
 ```javascript
 import React from 'react';
 import { Button } from '@rektangel/polygon-ui';

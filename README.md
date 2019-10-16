@@ -1,5 +1,7 @@
 # Quadrilateral
 
+[![Build Status](https://ci.eswe.se/api/badges/Rektangel/quadrilateral/status.svg)](https://ci.eswe.se/Rektangel/quadrilateral)
+
 Monorepo for Rektangel packages and applications.
 
 ## Getting Started

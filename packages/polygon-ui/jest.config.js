@@ -3,8 +3,10 @@ module.exports = {
   // `<rootDir>` is a token Jest substitutes
   roots: ['<rootDir>/src'],
 
-  // Jest transformations -- this adds support for TypeScript using ts-jest
-  transform: { '^.+\\.tsx?$': 'ts-jest' },
+  // There are 3 presets available.
+  // `ts-jest` will take care of .ts and .tsx files only,
+  // leaving JavaScript files as-is.
+  preset: 'ts-jest',
 
   // Runs special logic, such as adding special extended assertions to Jest
   setupFilesAfterEnv: ['@testing-library/jest-dom/extend-expect'],

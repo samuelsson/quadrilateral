@@ -2,7 +2,9 @@ import React from 'react';
 import styled from 'styled-components';
 import { configure, addDecorator } from "@storybook/react";
 import { withInfo } from '@storybook/addon-info';
-import {withThemesProvider} from 'storybook-addon-styled-component-theme';
+import { withKnobs } from '@storybook/addon-knobs';
+import { withThemesProvider } from 'storybook-addon-styled-component-theme';
+
 import { light, dark } from '../src/styles/themes'
 import GlobalStyles from '../src/styles/global';
 
@@ -37,10 +39,11 @@ const WrapperDecorator = storyFn => (
 
 addDecorator(WrapperDecorator);
 
-// `withInfo` addon must be first decorator if multiple
+// `withInfo` addon must be first decorator (except styled WrapperDecorator)
 addDecorator(withInfo({
   inline: true,
 }));
 addDecorator(withThemesProvider(themes));
+addDecorator(withKnobs);
 
 configure(loadStories, module);

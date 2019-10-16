@@ -1,6 +1,7 @@
 import * as React from 'react';
 import { storiesOf } from '@storybook/react';
 import styled from 'styled-components';
+import { boolean } from '@storybook/addon-knobs';
 
 import Button from './Button';
 
@@ -10,22 +11,23 @@ const ButtonContainer = styled.div`
   }
 `;
 
+const buttonStyles = ['primary', 'secondary', 'success', 'danger'];
+
 storiesOf('Button', module)
   .addDecorator(storyFn => <ButtonContainer>{storyFn()}</ButtonContainer>)
   .add(
     'Default',
     (): JSX.Element => (
       <>
-        <Button name="a">Primary</Button>
-        <Button name="b" appearance="secondary">
-          Secondary
-        </Button>
-        <Button name="b" appearance="success">
-          Success
-        </Button>
-        <Button name="c" appearance="danger">
-          Danger
-        </Button>
+        {buttonStyles.map(button => (
+          <Button
+            name={button}
+            appearance={button}
+            disabled={boolean('Disabled', false)}
+          >
+            {button.toUpperCase()}
+          </Button>
+        ))}
       </>
     )
   )
@@ -33,37 +35,16 @@ storiesOf('Button', module)
     'Bare',
     (): JSX.Element => (
       <>
-        <Button name="a" bare>
-          Primary
-        </Button>
-        <Button name="b" appearance="secondary" bare>
-          Secondary
-        </Button>
-        <Button name="b" appearance="success" bare>
-          Success
-        </Button>
-        <Button name="c" appearance="danger" bare>
-          Danger
-        </Button>
-      </>
-    )
-  )
-  .add(
-    'Disabled',
-    (): JSX.Element => (
-      <>
-        <Button name="a" disabled>
-          Primary
-        </Button>
-        <Button name="b" appearance="secondary" disabled>
-          Secondary
-        </Button>
-        <Button name="b" appearance="success" disabled>
-          Success
-        </Button>
-        <Button name="c" appearance="danger" disabled>
-          Danger
-        </Button>
+        {buttonStyles.map(button => (
+          <Button
+            name={button}
+            appearance={button}
+            disabled={boolean('Disabled', false)}
+            bare
+          >
+            {button.toUpperCase()}
+          </Button>
+        ))}
       </>
     )
   );

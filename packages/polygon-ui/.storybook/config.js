@@ -27,7 +27,7 @@ const themes = [
 
 // Add some space to each story, felt a little cramped...
 const StyledWrapper = styled.div`
-  padding: 60px 40px;
+  padding: 40px;
 `;
 
 const WrapperDecorator = storyFn => (
@@ -37,12 +37,9 @@ const WrapperDecorator = storyFn => (
   </StyledWrapper>
 );
 
+// `withInfo` addon must be first decorator
+addDecorator(withInfo());
 addDecorator(WrapperDecorator);
-
-// `withInfo` addon must be first decorator (except styled WrapperDecorator)
-addDecorator(withInfo({
-  inline: true,
-}));
 addDecorator(withThemesProvider(themes));
 addDecorator(withKnobs);
 

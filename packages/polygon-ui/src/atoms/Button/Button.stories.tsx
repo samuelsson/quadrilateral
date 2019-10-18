@@ -3,7 +3,7 @@ import { storiesOf } from '@storybook/react';
 import styled from 'styled-components';
 import { boolean } from '@storybook/addon-knobs';
 
-import Button from './Button';
+import Button, { appearance } from './Button';
 
 const ButtonContainer = styled.div`
   button:not(:last-of-type) {
@@ -11,36 +11,19 @@ const ButtonContainer = styled.div`
   }
 `;
 
-const buttonStyles = ['primary', 'secondary', 'success', 'danger'];
-
 storiesOf('Button', module)
   .addDecorator(storyFn => <ButtonContainer>{storyFn()}</ButtonContainer>)
   .add(
     'Default',
     (): JSX.Element => (
       <>
-        {buttonStyles.map(button => (
+        {appearance.map(button => (
           <Button
+            key={button}
             name={button}
             appearance={button}
             disabled={boolean('Disabled', false)}
-          >
-            {button.toUpperCase()}
-          </Button>
-        ))}
-      </>
-    )
-  )
-  .add(
-    'Bare',
-    (): JSX.Element => (
-      <>
-        {buttonStyles.map(button => (
-          <Button
-            name={button}
-            appearance={button}
-            disabled={boolean('Disabled', false)}
-            bare
+            bare={boolean('Bare', false)}
           >
             {button.toUpperCase()}
           </Button>

@@ -64,33 +64,37 @@ const baseStyle = ({
 `;
 
 const Button: React.FC<ButtonProps> = styled.button<ButtonProps>`
-  ${(props): FlattenSimpleInterpolation => {
+  ${({
+    theme,
+    appearance: buttonAppearance,
+    bare,
+  }): FlattenSimpleInterpolation => {
     const { white, red, green, blue } = colors;
 
-    switch (props.appearance) {
+    switch (buttonAppearance) {
       case 'secondary':
         return baseStyle({
           foreground: white,
           background: blue,
-          bare: !!props.bare,
+          bare: !!bare,
         });
       case 'success':
         return baseStyle({
           foreground: white,
           background: green,
-          bare: !!props.bare,
+          bare: !!bare,
         });
       case 'danger':
         return baseStyle({
           foreground: white,
           background: red,
-          bare: !!props.bare,
+          bare: !!bare,
         });
       default:
         return baseStyle({
-          foreground: props.theme.button.primary.foreground,
-          background: props.theme.button.primary.background,
-          bare: !!props.bare,
+          foreground: theme.button.primary.foreground,
+          background: theme.button.primary.background,
+          bare: !!bare,
         });
     }
   }};

@@ -17,8 +17,8 @@ const Input: React.FC<InputProps> = styled.input<InputProps>`
   height: 48px;
   padding: 0 ${variables.borderRadius};
   border-radius: ${variables.borderRadius};
-  border: ${(props): string =>
-    props.error ? `2px solid ${colors.red}` : 'none'};
+  border: ${({ error }): string =>
+    error ? `2px solid ${colors.red}` : 'none'};
   box-sizing: border-box;
   background-color: ${colors.gray[100]};
   box-shadow: 0 1px 1px ${colors.gray[300]};

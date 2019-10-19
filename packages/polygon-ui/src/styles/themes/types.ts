@@ -10,7 +10,14 @@ export interface Button {
   };
 }
 
+export interface Input {
+  background: string;
+  boxShadow: string;
+  borderColor: string;
+}
+
 export default interface Theme {
   base: Base;
   button: Button;
+  input: Input;
 }

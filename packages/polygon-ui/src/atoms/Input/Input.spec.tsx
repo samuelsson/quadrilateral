@@ -1,10 +1,24 @@
 import React from 'react';
-import { render } from '@testing-library/react';
+import { renderWithTheme } from '../../helpers/testHelper';
+import { light } from '../../styles/themes';
 import Input from './Input';
 
-describe('<Button />', (): void => {
-  it('matches snapshot', (): void => {
-    const { asFragment } = render(<Input name="input" type="text " />);
+describe('<Input />', (): void => {
+  it('with light theme renders with no errors', (): void => {
+    const { asFragment } = renderWithTheme(
+      <Input name="input-light" type="text " />,
+      light
+    );
+    expect(asFragment()).toMatchSnapshot();
+  });
+});
+
+describe('<Input />', (): void => {
+  it('with dark theme renders with no errors', (): void => {
+    const { asFragment } = renderWithTheme(
+      <Input name="input-dark" type="text " />,
+      light
+    );
     expect(asFragment()).toMatchSnapshot();
   });
 });

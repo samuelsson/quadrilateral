@@ -1,10 +1,21 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<Button /> matches snapshot 1`] = `
+exports[`<Input /> with dark theme renders with no errors 1`] = `
 <DocumentFragment>
   <input
-    class="sc-bdVaJa fbapII"
-    name="input"
+    class="sc-bdVaJa dPuuYD"
+    name="input-dark"
+    placeholder=""
+    type="text "
+  />
+</DocumentFragment>
+`;
+
+exports[`<Input /> with light theme renders with no errors 1`] = `
+<DocumentFragment>
+  <input
+    class="sc-bdVaJa dPuuYD"
+    name="input-light"
     placeholder=""
     type="text "
   />

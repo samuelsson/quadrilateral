@@ -2,6 +2,7 @@ import * as React from 'react';
 import { storiesOf } from '@storybook/react';
 import styled from 'styled-components';
 import { boolean } from '@storybook/addon-knobs';
+import { action } from '@storybook/addon-actions';
 
 import Button, { appearance } from './Button';
 
@@ -22,6 +23,7 @@ storiesOf('Button', module)
             key={button}
             name={button}
             appearance={button}
+            onClick={action('button-click')}
             disabled={boolean('Disabled', false)}
             bare={boolean('Bare', false)}
           >

@@ -1,4 +1,4 @@
-import React from 'react';
+import * as React from 'react';
 import { renderWithTheme } from '../../helpers/testHelper';
 import { light } from '../../styles/themes';
 import Input from './Input';

@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { configure, addDecorator } from "@storybook/react";
 import { withInfo } from '@storybook/addon-info';
+import { withA11y } from '@storybook/addon-a11y';
 import { withKnobs } from '@storybook/addon-knobs';
 import { withThemesProvider } from 'storybook-addon-styled-component-theme';
 
@@ -42,5 +43,6 @@ addDecorator(withInfo());
 addDecorator(WrapperDecorator);
 addDecorator(withThemesProvider(themes));
 addDecorator(withKnobs);
+addDecorator(withA11y);
 
 configure(loadStories, module);

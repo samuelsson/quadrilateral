@@ -3,7 +3,7 @@
 exports[`Button should match snapshot with dark theme 1`] = `
 <DocumentFragment>
   <button
-    class="sc-bdVaJa ffQnKI"
+    class="sc-AxjAm glKCZb"
     name="button"
     type="button"
   >
@@ -15,7 +15,7 @@ exports[`Button should match snapshot with dark theme 1`] = `
 exports[`Button should match snapshot with light theme 1`] = `
 <DocumentFragment>
   <button
-    class="sc-bdVaJa bcPRtl"
+    class="sc-AxjAm gTiQGs"
     name="button"
     type="button"
   >

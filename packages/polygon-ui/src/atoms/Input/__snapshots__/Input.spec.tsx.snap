@@ -3,7 +3,7 @@
 exports[`<Input /> with dark theme renders with no errors 1`] = `
 <DocumentFragment>
   <input
-    class="sc-bdVaJa dPuuYD"
+    class="sc-AxjAm ciemra"
     name="input-dark"
     placeholder=""
     type="text "
@@ -14,7 +14,7 @@ exports[`<Input /> with dark theme renders with no errors 1`] = `
 exports[`<Input /> with light theme renders with no errors 1`] = `
 <DocumentFragment>
   <input
-    class="sc-bdVaJa dPuuYD"
+    class="sc-AxjAm ciemra"
     name="input-light"
     placeholder=""
     type="text "

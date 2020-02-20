@@ -4,13 +4,15 @@ import styled from 'styled-components';
 import { boolean } from '@storybook/addon-knobs';
 import { action } from '@storybook/addon-actions';
 
-import Button, { appearance } from './Button';
+import Button from './Button';
 
 const ButtonContainer = styled.div`
   button:not(:last-of-type) {
     margin-right: 1rem;
   }
 `;
+
+const appearance = ['primary', 'secondary', 'success', 'danger'];
 
 storiesOf('Button', module)
   .addDecorator(storyFn => <ButtonContainer>{storyFn()}</ButtonContainer>)

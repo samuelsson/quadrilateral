@@ -5,7 +5,6 @@ exports[`<Input /> with dark theme renders with no errors 1`] = `
   <input
     class="sc-AxjAm ciemra"
     name="input-dark"
-    placeholder=""
     type="text "
   />
 </DocumentFragment>
@@ -16,7 +15,6 @@ exports[`<Input /> with light theme renders with no errors 1`] = `
   <input
     class="sc-AxjAm ciemra"
     name="input-light"
-    placeholder=""
     type="text "
   />
 </DocumentFragment>

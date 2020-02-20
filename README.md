@@ -1,6 +1,6 @@
 # Quadrilateral
 
-[![Build Status](https://ci.eswe.se/api/badges/Rektangel/quadrilateral/status.svg)](https://ci.eswe.se/Rektangel/quadrilateral)
+![Build Status](https://drone.samuelsson.dev/api/badges/Rektangel/quadrilateral/status.svg)
 
 Monorepo for Rektangel packages and applications.
 
@@ -32,7 +32,7 @@ And to link all the dependencies to each package
 yarn bootstrap
 ```
 
-You don't need to install dependencies in each package now, lerna has taken care of everything. 
+You don't need to install dependencies in each package now, lerna has taken care of everything.
 
 ## Deployment
 

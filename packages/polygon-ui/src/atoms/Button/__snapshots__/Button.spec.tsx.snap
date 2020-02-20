@@ -5,7 +5,6 @@ exports[`Button should match snapshot with dark theme 1`] = `
   <button
     class="sc-AxjAm glKCZb"
     name="button"
-    type="button"
   >
     Dark
   </button>
@@ -17,7 +16,6 @@ exports[`Button should match snapshot with light theme 1`] = `
   <button
     class="sc-AxjAm gTiQGs"
     name="button"
-    type="button"
   >
     Light
   </button>

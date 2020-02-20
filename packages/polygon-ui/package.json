@@ -54,7 +54,6 @@
   },
   "peerDependencies": {
     "@types/styled-components": ">=4",
-    "prop-types": ">=15",
     "react": ">=16.8",
     "react-dom": ">=16.8",
     "styled-components": ">=4"

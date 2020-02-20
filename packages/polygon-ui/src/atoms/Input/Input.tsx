@@ -1,20 +1,16 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import { colors } from '../../styles';
 import { Theme } from '../../styles/themes';
 
-export const inputPropTypes = {
-  name: PropTypes.string.isRequired,
-  type: PropTypes.string.isRequired,
-  disabled: PropTypes.bool,
-  error: PropTypes.bool,
-  placeholder: PropTypes.string,
-};
-
-type InputProps = PropTypes.InferProps<typeof inputPropTypes> & {
+interface InputProps {
+  name: string;
+  type: string;
+  disabled?: boolean;
+  error?: boolean;
+  placeholder?: string;
   theme?: Theme;
-};
+}
 
 const Input: React.FC<InputProps> = styled.input<InputProps>`
   height: 48px;
@@ -43,12 +39,5 @@ const Input: React.FC<InputProps> = styled.input<InputProps>`
     cursor: not-allowed;
   }
 `;
-
-Input.propTypes = inputPropTypes;
-Input.defaultProps = {
-  disabled: false,
-  error: false,
-  placeholder: '',
-};
 
 export default Input;

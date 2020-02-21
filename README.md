@@ -34,9 +34,33 @@ yarn bootstrap
 
 You don't need to install dependencies in each package now, lerna has taken care of everything.
 
-## Deployment
+## Structure of packages and applications
 
-Will be added when we have deployment in place ;)
+Lerna manages two directories in this setup, `packages/` and `applications/`.
+
+* `packages` will be used for all shared packages that are also being published to the public npm registry.
+* `applications` are for complete applications not being published to npm but managed and deployed manually. It's important that they are made private by setting `"private": true` in the `package.json` files.
+
+## Publish packages
+
+This is done manually at the moment but will be made automatically for all pushes to master later on :)
+
+All projects in the `packages/` directory are published to npm-registry. Because versions are already handled in all projects publishing is really simple. Make sure you are logged in to npm (a `.npmrc` exists in `/~`).
+
+To publish new versions of all updated packages in one single command (the preferred way):
+
+```shell
+yarn run lerna publish
+```
+
+If you for some reason want to have other version numbers you can do it like this:
+
+```shell
+yarn run lerna version <major | minor | patch>
+yarn run lerna publish from-git
+```
+
+This will first create new versions and push to origin. Secondly publish all packages on git where the version is higher than on the registry.
 
 ## Built With
 

@@ -1,5 +1,4 @@
 kind: pipeline
-type: docker
 name: pull_request
 
 trigger:
@@ -11,7 +10,6 @@ steps:
     image: node
     commands:
       - node --version
-      - npm --version
       - yarn --version
       - yarn install
       - yarn bootstrap

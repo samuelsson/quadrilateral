@@ -3,6 +3,27 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.4.1](https://github.com/Rektangel/quadrilateral/compare/@rektangel/polygon-ui@0.4.0...@rektangel/polygon-ui@0.4.1) (2020-02-21)
+
+
+### chore
+
+* 🤖 bump all packages to latest ([ae6fa1c](https://github.com/Rektangel/quadrilateral/commit/ae6fa1cacd4045704001aaabbd7be94b3624b02a))
+
+
+### Features
+
+* 🎸 add theme support to polygon-ui ([51f25aa](https://github.com/Rektangel/quadrilateral/commit/51f25aa49e44cc52cf68042aab758e7939cd9006))
+
+
+### BREAKING CHANGES
+
+* 🧨 Major version bump in dependencies
+
+
+
+
+
 # [0.4.0](https://github.com/Rektangel/quadrilateral/compare/@rektangel/polygon-ui@0.3.2...@rektangel/polygon-ui@0.4.0) (2019-09-18)
 
 

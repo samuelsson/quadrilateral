@@ -2,7 +2,7 @@
 
 ![Build Status](https://drone.samuelsson.dev/api/badges/Rektangel/quadrilateral/status.svg)
 
-Monorepo for Rektangel packages and applications.
+Monorepo for Rektangel packages and applications. Super awesome!
 
 ## Getting Started
 

@@ -1,0 +1,26 @@
+{
+  "name": "linje",
+  "version": "0.1.0",
+  "description": "SSR application with Next.js",
+  "main": "index.js",
+  "author": "@ErikSamuelsson",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "dev": "next",
+    "build": "next build",
+    "start": "next start"
+  },
+  "dependencies": {
+    "next": "^9.2.2",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0"
+  },
+  "devDependencies": {
+    "@rektangel/eslint-config": "^1.1.4",
+    "@types/node": "^13.7.4",
+    "@types/react": "^16.9.22",
+    "@types/react-dom": "^16.9.5",
+    "typescript": "^3.8.2"
+  }
+}

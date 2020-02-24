@@ -10,6 +10,7 @@
   "license": "MIT",
   "homepage": "https://rektangel.se/",
   "workspaces": [
+    "applications/*",
     "packages/*"
   ],
   "scripts": {
@@ -22,13 +23,9 @@
   "devDependencies": {
     "@commitlint/cli": "^8.3.5",
     "@commitlint/config-conventional": "^8.3.4",
-    "@types/styled-components": "^5.0.0",
     "eslint": "^6.8.0",
     "husky": "^4.2.3",
     "lerna": "^3.20.2",
-    "prettier": "^1.19.1",
-    "react": "^16.12.0",
-    "react-dom": "^16.12.0",
-    "styled-components": "^5.0.1"
+    "prettier": "^1.19.1"
   }
 }

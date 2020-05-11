@@ -1,0 +1,18 @@
+{
+  "name": "linje-backend",
+  "version": "0.1.0",
+  "description": "Backend for linje",
+  "main": "index.js",
+  "author": "@ErikSamuelsson",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "dev": "nodemon",
+    "start": "ts-node src/index.ts"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.3",
+    "ts-node": "^8.6.2",
+    "typescript": "^3.8.3"
+  }
+}

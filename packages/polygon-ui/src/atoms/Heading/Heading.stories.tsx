@@ -7,7 +7,7 @@ storiesOf('Heading', module).add(
   'Default',
   (): JSX.Element => (
     <>
-      {[H1, H2, H3, H4, H5, H6].map(Heading => (
+      {[H1, H2, H3, H4, H5, H6].map((Heading) => (
         <Heading center={boolean('Centered', false)}>
           {text('text', 'Heading')}
         </Heading>

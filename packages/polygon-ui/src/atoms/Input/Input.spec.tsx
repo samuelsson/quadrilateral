@@ -1,9 +1,9 @@
 import * as React from 'react';
 import { renderWithTheme } from '../../helpers/testHelper';
-import { light } from '../../styles/themes';
+import { dark, light } from '../../styles/themes';
 import Input from './Input';
 
-describe('<Input />', (): void => {
+describe('Input', (): void => {
   it('with light theme renders with no errors', (): void => {
     const { asFragment } = renderWithTheme(
       <Input name="input-light" type="text " />,
@@ -11,13 +11,11 @@ describe('<Input />', (): void => {
     );
     expect(asFragment()).toMatchSnapshot();
   });
-});
 
-describe('<Input />', (): void => {
   it('with dark theme renders with no errors', (): void => {
     const { asFragment } = renderWithTheme(
       <Input name="input-dark" type="text " />,
-      light
+      dark
     );
     expect(asFragment()).toMatchSnapshot();
   });

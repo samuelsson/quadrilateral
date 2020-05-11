@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Button should match snapshot with dark theme 1`] = `
+exports[`Button with dark theme renders with no errors 1`] = `
 <DocumentFragment>
   <button
     class="sc-AxjAm glKCZb"
@@ -11,7 +11,7 @@ exports[`Button should match snapshot with dark theme 1`] = `
 </DocumentFragment>
 `;
 
-exports[`Button should match snapshot with light theme 1`] = `
+exports[`Button with light theme renders with no errors 1`] = `
 <DocumentFragment>
   <button
     class="sc-AxjAm gTiQGs"

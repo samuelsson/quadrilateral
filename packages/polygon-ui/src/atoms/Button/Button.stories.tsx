@@ -15,12 +15,12 @@ const ButtonContainer = styled.div`
 const appearance = ['primary', 'secondary', 'success', 'danger'];
 
 storiesOf('Button', module)
-  .addDecorator(storyFn => <ButtonContainer>{storyFn()}</ButtonContainer>)
+  .addDecorator((storyFn) => <ButtonContainer>{storyFn()}</ButtonContainer>)
   .add(
     'Default',
     (): JSX.Element => (
       <>
-        {appearance.map(button => (
+        {appearance.map((button) => (
           <Button
             key={button}
             name={button}

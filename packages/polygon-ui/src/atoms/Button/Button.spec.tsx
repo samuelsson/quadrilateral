@@ -1,15 +1,10 @@
 import * as React from 'react';
-import { ThemeProvider } from 'styled-components';
-import { render, RenderResult } from '@testing-library/react';
-
-import { Theme, dark, light } from '../../styles/themes';
+import { renderWithTheme } from '../../helpers/testHelper';
+import { dark, light } from '../../styles/themes';
 import Button from './Button';
 
 describe('Button', (): void => {
-  const renderWithTheme = (element: JSX.Element, theme: Theme): RenderResult =>
-    render(<ThemeProvider theme={theme}>{element}</ThemeProvider>);
-
-  it('should match snapshot with light theme', (): void => {
+  it('with light theme renders with no errors', (): void => {
     const { asFragment } = renderWithTheme(
       <Button name="button">Light</Button>,
       light
@@ -17,7 +12,7 @@ describe('Button', (): void => {
     expect(asFragment()).toMatchSnapshot();
   });
 
-  it('should match snapshot with dark theme', (): void => {
+  it('with dark theme renders with no errors', (): void => {
     const { asFragment } = renderWithTheme(
       <Button name="button">Dark</Button>,
       dark

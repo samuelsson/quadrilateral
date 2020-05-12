@@ -1,6 +1,6 @@
 {
   "name": "@rektangel/eslint-config",
-  "version": "1.1.5",
+  "version": "1.1.6",
   "description": "eslint and prettier config for all Rektangel projects",
   "main": "index.js",
   "scripts": {

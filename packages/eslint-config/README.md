@@ -4,33 +4,29 @@ This is for projects with TypeScript, Prettier and React.
 
 ## Installation
 
-First we need to make sure we have all peer dependencies installed:
+`eslint` and `prettier` are included as dependencies in this package and does not need to be installed manually.
 
-```shell
-npx install-peerdeps --dev @rektangel/eslint-config
-```
-
-Then we install the actual package with:
+Install this package with the following:
 
 ```shell
 yarn add --dev @rektangel/eslint-config
 ```
 
-After that we need to enable the new rule set. Create a `.eslintrc` in the root directory and add this:
+After that we need to enable the new rule set. Add this property to your `package.json`:
 
 ```json
 {
-  "extends": "@rektangel/eslint-config"
+  "eslintConfig": {
+    "extends": "@rektangel/eslint-config"
+  }
 }
 ```
 
-You also need to set some prettier rules. Create a `.prettierrc` in the root directory and add this:
+You also need to set some prettier rules. Create a `.prettierrc` file in the root directory and add this:
 
 ````json
 {
-  "semi": true,
-  "singleQuote": true,
-  "trailingComma": "es5"
+  "singleQuote": true
 }
 ````
 

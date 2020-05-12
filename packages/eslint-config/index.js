@@ -18,15 +18,15 @@ module.exports = {
   ],
   plugins: ['@typescript-eslint'],
   rules: {
-    "import/extensions": [
-      "error",
-      "ignorePackages",
+    'import/extensions': [
+      'error',
+      'ignorePackages',
       {
-        "js": "never",
-        "jsx": "never",
-        "ts": "never",
-        "tsx": "never"
-      }
+        js: 'never',
+        jsx: 'never',
+        ts: 'never',
+        tsx: 'never',
+      },
     ],
     'import/no-extraneous-dependencies': 0,
     'import/prefer-default-export': 0,

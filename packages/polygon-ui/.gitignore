@@ -1,4 +1,0 @@
-# Package specific ignores (main ignore is in monorepo root)
-
-# Typescript compile folder
-dist

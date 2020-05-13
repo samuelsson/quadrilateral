@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.2.0](https://github.com/Rektangel/quadrilateral/compare/@rektangel/eslint-config@1.1.6...@rektangel/eslint-config@1.2.0) (2020-05-13)
+
+
+### Features
+
+* 🎸 add config file for node projects in typescript ([3ad5c40](https://github.com/Rektangel/quadrilateral/commit/3ad5c40dddd5ab51cc7970b4350dce0f4d1a692b))
+
+
+
+
+
 ## [1.1.6](https://github.com/Rektangel/quadrilateral/compare/@rektangel/eslint-config@1.1.5...@rektangel/eslint-config@1.1.6) (2020-05-12)
 
 **Note:** Version bump only for package @rektangel/eslint-config

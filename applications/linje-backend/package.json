@@ -1,6 +1,6 @@
 {
   "name": "linje-backend",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "Backend for linje",
   "main": "index.js",
   "author": "@ErikSamuelsson",

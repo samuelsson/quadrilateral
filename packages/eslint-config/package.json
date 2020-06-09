@@ -13,6 +13,10 @@
     "CHANGELOG.md",
     "LICENSE"
   ],
+  "keywords": [
+    "eslint",
+    "eslint-config"
+  ],
   "author": "@ErikSamuelsson",
   "license": "MIT",
   "repository": {
@@ -22,7 +26,7 @@
   "publishConfig": {
     "access": "public"
   },
-  "dependencies": {
+  "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^3.2.0",
     "@typescript-eslint/parser": "^3.2.0",
     "eslint": "^7.2.0",
@@ -36,11 +40,18 @@
     "eslint-plugin-react-hooks": "^2.5.1",
     "prettier": "^2.0.5"
   },
-  "eslintConfig": {
-    "extends": "@rektangel/eslint-config"
-  },
-  "keywords": [
-    "eslint",
-    "eslint-config"
-  ]
+  "peerDependencies": {
+    "@typescript-eslint/eslint-plugin": "^3.2.0",
+    "@typescript-eslint/parser": "^3.2.0",
+    "eslint": "^7.2.0",
+    "eslint-config-airbnb": "^18.1.0",
+    "eslint-config-airbnb-base": "^14.1.0",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-plugin-import": "^2.21.1",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-prettier": "^3.1.3",
+    "eslint-plugin-react": "^7.20.0",
+    "eslint-plugin-react-hooks": "^2.5.1",
+    "prettier": "^2.0.5"
+  }
 }

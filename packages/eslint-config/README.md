@@ -4,9 +4,15 @@ This is for projects with TypeScript, Prettier and React.
 
 ## Installation
 
-`eslint` and `prettier` are included as dependencies in this package and does not need to be installed manually.
+To be able to use this config we need to install `prettier` and `eslint` together with plugins and rules sets. We can do that with one command.
 
-Install this package with the following:
+```shell
+npx install-peerdeps @rektangel/eslint-config --dev --yarn
+```
+
+This will install all required dependencies as devDependencies in your project. At the moment everything is included here and if you know what you are doing you can install just the ones you need manually. For example if you are not using React you can skip the `eslint-plugin-react`.
+
+Then we install the actual package (this package, you are reading about) with the following:
 
 ```shell
 yarn add --dev @rektangel/eslint-config

@@ -12,13 +12,13 @@ npx install-peerdeps @rektangel/eslint-config --dev --yarn
 
 This will install all required dependencies as devDependencies in your project. At the moment everything is included here and if you know what you are doing you can install just the ones you need manually. For example if you are not using React you can skip the `eslint-plugin-react`.
 
-Then we install the actual package (this package, you are reading about) with the following:
+The above command will install all peer-deps together with the actual package (this package, you are reading about). If you want to install it yourself you can do that with:
 
 ```shell
 yarn add --dev @rektangel/eslint-config
 ```
 
-After that we need to enable the new rule set. Add this property to your `package.json`:
+When the config is installed we need to enable it. Add this property to your `package.json`:
 
 ```json
 {

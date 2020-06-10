@@ -28,6 +28,7 @@ module.exports = {
         tsx: 'never',
       },
     ],
+    'react/prop-types': 0,
     'import/no-extraneous-dependencies': 0,
     'import/prefer-default-export': 0,
     'react/jsx-filename-extension': ['error', { extensions: ['.tsx'] }],

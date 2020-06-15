@@ -1,7 +1,5 @@
 # Quadrilateral
 
-![Build Status](https://drone.samuelsson.dev/api/badges/Rektangel/quadrilateral/status.svg)
-
 Monorepo for Rektangel packages and applications.
 
 ## Getting Started

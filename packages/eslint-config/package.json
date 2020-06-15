@@ -17,6 +17,9 @@
     "eslint",
     "eslint-config"
   ],
+  "eslintConfig": {
+    "extends": "./index.js"
+  },
   "author": "@ErikSamuelsson",
   "license": "MIT",
   "repository": {

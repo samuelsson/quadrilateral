@@ -20,7 +20,7 @@
   "devDependencies": {
     "@rektangel/eslint-config": "^1.2.3",
     "@types/node": "^14.0.13",
-    "@types/react": "^16.9.35",
+    "@types/react": "^16.9.38",
     "@types/react-dom": "^16.9.8",
     "typescript": "^3.9.5"
   },

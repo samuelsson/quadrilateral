@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.1.4](https://github.com/Rektangel/quadrilateral/compare/linje-backend@0.1.3...linje-backend@0.1.4) (2020-07-06)
+
+**Note:** Version bump only for package linje-backend
+
+
+
+
+
 ## [0.1.3](https://github.com/Rektangel/quadrilateral/compare/linje-backend@0.1.2...linje-backend@0.1.3) (2020-06-08)
 
 **Note:** Version bump only for package linje-backend

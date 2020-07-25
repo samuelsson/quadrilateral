@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.3.0](https://github.com/Rektangel/quadrilateral/compare/@rektangel/eslint-config@1.2.7...@rektangel/eslint-config@1.3.0) (2020-07-25)
+
+
+### Features
+
+* 🎸 update eslint node config with new rules and settings ([031f51c](https://github.com/Rektangel/quadrilateral/commit/031f51c601c1b285505c27a9a1c7d573cc12af05))
+
+
+
+
+
 ## [1.2.7](https://github.com/Rektangel/quadrilateral/compare/@rektangel/eslint-config@1.2.6...@rektangel/eslint-config@1.2.7) (2020-07-10)
 
 **Note:** Version bump only for package @rektangel/eslint-config

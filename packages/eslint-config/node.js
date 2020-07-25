@@ -8,8 +8,28 @@ module.exports = {
     'plugin:prettier/recommended',
   ],
   plugins: ['@typescript-eslint'],
-  rules: {},
+  rules: {
+    'import/extensions': [
+      'error',
+      'ignorePackages',
+      {
+        js: 'never',
+        ts: 'never',
+      },
+    ],
+    'import/prefer-default-export': 0,
+    'no-console': 0,
+  },
+  settings: {
+    'import/resolver': {
+      node: {
+        paths: ['src'],
+        extensions: ['.ts'],
+      },
+    },
+  },
   env: {
     jest: true,
+    node: true,
   },
 };

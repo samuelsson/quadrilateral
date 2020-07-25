@@ -60,6 +60,10 @@ yarn run lerna publish from-git
 
 This will first create new versions and push to origin. Secondly publish all packages on git where the version is higher than on the registry.
 
+### If something goes wrong
+
+Sometimes when running `lerna publish` the new version gets pushed to GitHub as a new release/tag but the actual publishing to npm fails (registry down for example). If this happens it is easy to trigger a new deploy for the current release on GitHub with the command `yarn run lerna publish from-git`.
+
 ## Built With
 
 * [lerna](https://github.com/lerna/lerna) - The tool for managing all packages inside this single repo.

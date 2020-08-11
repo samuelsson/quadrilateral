@@ -3,9 +3,20 @@
     "module": "commonjs",
     "removeComments": true,
     "sourceMap": true,
-    "target": "es5",
+    "target": "es2018",
+    "lib": [
+      "es2018",
+      "esnext.asynciterable"
+    ],
     "outDir": "dist",
-    "skipLibCheck": true
+    "skipLibCheck": true,
+    "declaration": false,
+    "strict": false,
+    "moduleResolution": "node",
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true
   },
   "include": [
     "src/**/*"

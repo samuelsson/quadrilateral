@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.3.0](https://github.com/Rektangel/quadrilateral/compare/linje-backend@0.2.0...linje-backend@0.3.0) (2020-08-12)
+
+
+### Features
+
+* 🎸 add base functionality with user model and resolver ([92808ed](https://github.com/Rektangel/quadrilateral/commit/92808ed6b091b2db966eb50c3e063373316fdf03))
+
+
+
+
+
 # [0.2.0](https://github.com/Rektangel/quadrilateral/compare/linje-backend@0.1.4...linje-backend@0.2.0) (2020-07-25)
 
 

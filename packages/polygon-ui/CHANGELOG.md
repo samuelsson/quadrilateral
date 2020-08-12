@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.5.1](https://github.com/Rektangel/quadrilateral/compare/@rektangel/polygon-ui@0.5.0...@rektangel/polygon-ui@0.5.1) (2020-08-12)
+
+**Note:** Version bump only for package @rektangel/polygon-ui
+
+
+
+
+
 # [0.5.0](https://github.com/Rektangel/quadrilateral/compare/@rektangel/polygon-ui@0.4.12...@rektangel/polygon-ui@0.5.0) (2020-07-25)
 
 

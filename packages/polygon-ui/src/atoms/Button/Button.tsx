@@ -7,7 +7,7 @@ import { Theme } from '../../styles/themes';
 type Type = 'button' | 'submit' | 'reset';
 type Appearance = 'primary' | 'secondary' | 'success' | 'danger';
 
-interface ButtonProps {
+export interface ButtonProps {
   name: string;
   children: React.ReactNode;
   appearance?: Appearance;

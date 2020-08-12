@@ -1,20 +1,30 @@
+/* eslint-disable react/jsx-props-no-spreading */
 import * as React from 'react';
-import { storiesOf } from '@storybook/react';
-import { boolean, radios, text } from '@storybook/addon-knobs';
+import { Story, Meta } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
+import { hideControls } from '../../helpers/storybookHelper';
+import Input, { InputProps } from './Input';
 
-import Input from './Input';
+export default {
+  component: Input,
+  title: 'Atoms / Input',
+  args: {
+    name: 'input',
+    type: 'text',
+    onChange: action('Input changed'),
+    placeholder: 'Placeholder',
+  },
+  argTypes: {
+    type: {
+      control: {
+        type: 'inline-radio',
+        options: ['text', 'password'],
+      },
+    },
+    ...hideControls(['name', 'onChange']),
+  },
+} as Meta;
 
-storiesOf('Input', module).add(
-  'Default',
-  (): JSX.Element => (
-    <Input
-      type={radios('Type', { Text: 'text', Password: 'password' }, 'text')}
-      name="input"
-      onChange={action('Input changed')}
-      placeholder={text('Placeholder', '')}
-      disabled={boolean('Disabled', false)}
-      error={boolean('Error', false)}
-    />
-  )
+export const Default: Story<InputProps> = (args) => (
+  <Input name="input" {...args} />
 );

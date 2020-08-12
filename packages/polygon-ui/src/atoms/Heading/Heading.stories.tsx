@@ -1,17 +1,25 @@
+/* eslint-disable react/jsx-props-no-spreading */
 import * as React from 'react';
-import { storiesOf } from '@storybook/react';
-import { boolean, text } from '@storybook/addon-knobs';
-import { H1, H2, H3, H4, H5, H6 } from './Heading';
+import { Story, Meta } from '@storybook/react';
+import { H1, H2, H3, H4, H5, H6, HeadingProps } from './Heading';
 
-storiesOf('Heading', module).add(
-  'Default',
-  (): JSX.Element => (
-    <>
-      {[H1, H2, H3, H4, H5, H6].map((Heading) => (
-        <Heading center={boolean('Centered', false)}>
-          {text('text', 'Heading')}
-        </Heading>
-      ))}
-    </>
-  )
+export default {
+  title: 'Atoms / Heading',
+  args: {
+    children: 'This is a heading',
+  },
+  argTypes: {
+    center: { type: 'boolean' },
+  },
+} as Meta;
+
+export const Default: Story<HeadingProps> = (args) => (
+  <>
+    <H1 {...args} />
+    <H2 {...args} />
+    <H3 {...args} />
+    <H4 {...args} />
+    <H5 {...args} />
+    <H6 {...args} />
+  </>
 );

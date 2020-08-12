@@ -1,37 +1,35 @@
+/* eslint-disable react/jsx-props-no-spreading */
 import * as React from 'react';
-import { storiesOf } from '@storybook/react';
-import styled from 'styled-components';
-import { boolean } from '@storybook/addon-knobs';
+import { Story, Meta } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
+import { hideControls } from '../../helpers/storybookHelper';
+import Button, { ButtonProps } from './Button';
 
-import Button from './Button';
+export default {
+  component: Button,
+  title: 'Atoms / Button',
+  args: {
+    name: 'button',
+    children: 'Button',
+    onClick: action('button-click'),
+  },
+  argTypes: {
+    ...hideControls(['name', 'type', 'onClick', 'appearance']),
+  },
+} as Meta;
 
-const ButtonContainer = styled.div`
-  button:not(:last-of-type) {
-    margin-right: 1rem;
-  }
-`;
+const Template: Story<ButtonProps> = (args) => (
+  <Button {...args} />
+);
 
-const appearance = ['primary', 'secondary', 'success', 'danger'];
+export const Primary = Template.bind({});
+Primary.args = { appearance: 'primary' };
 
-storiesOf('Button', module)
-  .addDecorator((storyFn) => <ButtonContainer>{storyFn()}</ButtonContainer>)
-  .add(
-    'Default',
-    (): JSX.Element => (
-      <>
-        {appearance.map((button) => (
-          <Button
-            key={button}
-            name={button}
-            appearance={button}
-            onClick={action('button-click')}
-            disabled={boolean('Disabled', false)}
-            bare={boolean('Bare', false)}
-          >
-            {button.toUpperCase()}
-          </Button>
-        ))}
-      </>
-    )
-  );
+export const Secondary = Template.bind({});
+Secondary.args = { appearance: 'secondary' };
+
+export const Success = Template.bind({});
+Success.args = { appearance: 'success' };
+
+export const Danger = Template.bind({});
+Danger.args = { appearance: 'danger' };

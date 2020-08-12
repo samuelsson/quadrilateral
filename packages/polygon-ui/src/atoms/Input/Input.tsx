@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { colors } from '../../styles';
 import { Theme } from '../../styles/themes';
 
-interface InputProps {
+export interface InputProps {
   name: string;
   type: string;
   disabled?: boolean;

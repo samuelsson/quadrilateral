@@ -1,5 +1,3 @@
-import type { StorybookConfig } from '@storybook/core/types';
-
 module.exports = {
   stories: ['../src/**/*.stories.@(ts|tsx)'],
   logLevel: 'debug',
@@ -10,4 +8,4 @@ module.exports = {
   typescript: {
     check: true,
   },
-} as StorybookConfig;
+};

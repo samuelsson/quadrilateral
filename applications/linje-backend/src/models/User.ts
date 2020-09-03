@@ -8,11 +8,11 @@ export class User {
 
   @Field()
   @Property({ required: true })
-  name: string;
+  email: string;
 
   @Field()
   @Property({ required: true })
-  email: string;
+  password: string;
 }
 
 export const UserModel = getModelForClass(User);

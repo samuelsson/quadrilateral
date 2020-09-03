@@ -10,7 +10,6 @@ async function init(): Promise<void> {
   const schema = await buildSchema({
     resolvers,
     emitSchemaFile: true,
-    validate: false,
   });
 
   // create mongoose connection

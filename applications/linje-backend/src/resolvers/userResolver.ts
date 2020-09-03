@@ -1,5 +1,6 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 import { Arg, Mutation, Query, Resolver } from 'type-graphql';
+import argon2 from 'argon2';
 import { User, UserModel } from '../models/User';
 import UserInput from './userInput';
 
@@ -13,11 +14,18 @@ class UserResolver {
   }
 
   @Mutation((returns) => User)
-  async createUser(@Arg('data') { name, email }: UserInput): Promise<User> {
+  async register(@Arg('data') { email, password }: UserInput): Promise<User> {
+    const userExists = await this.userModel.exists({ email });
+
+    if (userExists) {
+      // TODO: Throw error here
+    }
+    const hashedPassword = await argon2.hash(password);
+
     return (
       await this.userModel.create({
-        name,
         email,
+        password: hashedPassword,
       })
     ).save();
   }

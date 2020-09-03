@@ -1,6 +1,6 @@
-import { ApolloServer } from 'apollo-server-express';
-import express from 'express';
 import 'reflect-metadata';
+import express from 'express';
+import { graphqlHTTP } from 'express-graphql';
 import { buildSchema } from 'type-graphql';
 import { connect } from 'mongoose';
 
@@ -19,11 +19,16 @@ async function init(): Promise<void> {
   });
   await mongoose.connection;
 
-  const server = new ApolloServer({ schema });
   const app = express();
 
-  server.applyMiddleware({ app });
-  app.listen({ port: 4000 }, () => console.log('server running'));
+  await app.use(
+    graphqlHTTP({
+      schema,
+      graphiql: true,
+    })
+  );
+
+  app.listen(4000, () => console.log('Server running on port 4000'));
 }
 
 init().catch((error) => {

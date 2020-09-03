@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.3.1 (2020-09-03)
+
+**Note:** Version bump only for package linje-server
+
+
+
+
+
 # [0.3.0](https://github.com/Rektangel/quadrilateral/compare/linje-backend@0.2.0...linje-backend@0.3.0) (2020-08-12)
 
 

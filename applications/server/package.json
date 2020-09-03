@@ -1,7 +1,7 @@
 {
-  "name": "linje-backend",
+  "name": "linje-server",
   "version": "0.3.0",
-  "description": "Backend for linje",
+  "description": "API back-end for linje",
   "main": "index.js",
   "author": "@ErikSamuelsson",
   "license": "MIT",

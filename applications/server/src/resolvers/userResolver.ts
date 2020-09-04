@@ -3,6 +3,7 @@ import { Arg, Mutation, Query, Resolver } from 'type-graphql';
 import argon2 from 'argon2';
 import { User, UserModel } from '../models/User';
 import UserInput from './userInput';
+import { generateJwtToken } from '../helpers/auth';
 
 @Resolver((of) => User)
 class UserResolver {
@@ -13,21 +14,20 @@ class UserResolver {
     return this.userModel.findById({ _id: id });
   }
 
-  @Mutation((returns) => User)
-  async register(@Arg('data') { email, password }: UserInput): Promise<User> {
-    const userExists = await this.userModel.exists({ email });
-
-    if (userExists) {
-      // TODO: Throw error here
-    }
+  @Mutation((returns) => String)
+  async register(
+    @Arg('input') { email, password }: UserInput
+  ): Promise<string> {
     const hashedPassword = await argon2.hash(password);
 
-    return (
+    const newUser = await (
       await this.userModel.create({
         email,
         password: hashedPassword,
       })
     ).save();
+
+    return generateJwtToken(newUser);
   }
 }
 

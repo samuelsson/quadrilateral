@@ -4,10 +4,10 @@ import { prop as Property, getModelForClass } from '@typegoose/typegoose';
 @ObjectType({ description: 'The User model' })
 export class User {
   @Field(() => ID)
-  id: number;
+  id: string;
 
   @Field()
-  @Property({ required: true })
+  @Property({ required: true, unique: true })
   email: string;
 
   @Field()

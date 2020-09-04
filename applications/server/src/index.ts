@@ -4,6 +4,8 @@ import { graphqlHTTP } from 'express-graphql';
 import { buildSchema } from 'type-graphql';
 import { connect } from 'mongoose';
 
+// Load config (env variables) before everything else to ensure they are set.
+import './config';
 import resolvers from './resolvers';
 
 async function init(): Promise<void> {
@@ -16,6 +18,7 @@ async function init(): Promise<void> {
   const mongoose = await connect('mongodb://localhost:27017/data', {
     useNewUrlParser: true,
     useUnifiedTopology: true,
+    useCreateIndex: true,
   });
   await mongoose.connection;
 

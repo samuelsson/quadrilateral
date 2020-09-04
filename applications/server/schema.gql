@@ -4,7 +4,7 @@
 # -----------------------------------------------
 
 type Mutation {
-  register(data: UserInput!): User!
+  register(input: UserInput!): String!
 }
 
 type Query {

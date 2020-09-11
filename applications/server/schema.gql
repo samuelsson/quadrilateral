@@ -8,14 +8,7 @@ type Mutation {
 }
 
 type Query {
-  userByID(id: String!): User!
-}
-
-"""The User model"""
-type User {
-  email: String!
-  id: ID!
-  password: String!
+  login(input: UserInput!): String!
 }
 
 input UserInput {

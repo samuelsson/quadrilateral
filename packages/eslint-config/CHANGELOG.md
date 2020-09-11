@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.3.3](https://github.com/Rektangel/quadrilateral/compare/@rektangel/eslint-config@1.3.2...@rektangel/eslint-config@1.3.3) (2020-09-11)
+
+
+### Bug Fixes
+
+* 🐛 add new rule for fixing no-use-before-define ([3417deb](https://github.com/Rektangel/quadrilateral/commit/3417deb1db0973464aaa5f5398c2d8ee5bfa3328)), closes [/github.com/typescript-eslint/typescript-eslint/issues/2502#issuecomment-689595020](https://github.com//github.com/typescript-eslint/typescript-eslint/issues/2502/issues/issuecomment-689595020)
+
+
+
+
+
 ## [1.3.2](https://github.com/Rektangel/quadrilateral/compare/@rektangel/eslint-config@1.3.1...@rektangel/eslint-config@1.3.2) (2020-09-03)
 
 **Note:** Version bump only for package @rektangel/eslint-config

@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.4.0](https://github.com/Rektangel/quadrilateral/compare/linje-server@0.3.1...linje-server@0.4.0) (2020-09-11)
+
+
+### Features
+
+* 🎸 add basic login functionality ([eebd25a](https://github.com/Rektangel/quadrilateral/commit/eebd25a514b1abf53e746d9fbc7c0eaf569a2596))
+* 🎸 add token generation for register ([972a545](https://github.com/Rektangel/quadrilateral/commit/972a5454c80d5ba28e3aeb3dc4edbf02787fd222))
+
+
+
+
+
 ## 0.3.1 (2020-09-03)
 
 **Note:** Version bump only for package linje-server

@@ -3,7 +3,7 @@
 exports[`Button with dark theme renders with no errors 1`] = `
 <DocumentFragment>
   <button
-    class="sc-AxjAm glKCZb"
+    class="sc-bdnylx gRKfwO"
     name="button"
   >
     Dark
@@ -14,7 +14,7 @@ exports[`Button with dark theme renders with no errors 1`] = `
 exports[`Button with light theme renders with no errors 1`] = `
 <DocumentFragment>
   <button
-    class="sc-AxjAm gTiQGs"
+    class="sc-bdnylx hANIXl"
     name="button"
   >
     Light

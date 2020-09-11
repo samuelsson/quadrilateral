@@ -11,7 +11,7 @@ class UserResolver {
   private readonly userModel = UserModel;
 
   @Query((returns) => String)
-  async login(@Arg('input') { email, password }: UserInput): Promise<String> {
+  async login(@Arg('input') { email, password }: UserInput): Promise<string> {
     const user = await this.userModel.findOne({ email });
 
     if (!user) {

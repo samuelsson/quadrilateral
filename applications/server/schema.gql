@@ -8,17 +8,12 @@ type AuthResponse {
   user: User
 }
 
-input LoginInput {
-  email: String!
-  password: String!
-}
-
 type Mutation {
-  register(input: RegisterInput!): AuthResponse!
+  register(registerInput: RegisterInput!): AuthResponse!
 }
 
 type Query {
-  login(input: LoginInput!): AuthResponse!
+  login(email: String!, password: String!): AuthResponse!
 }
 
 input RegisterInput {

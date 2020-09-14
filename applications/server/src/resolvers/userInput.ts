@@ -2,7 +2,7 @@ import { Field, InputType } from 'type-graphql';
 import { IsEmail, Length } from 'class-validator';
 
 @InputType()
-class UserInput {
+export class RegisterInput {
   @Field()
   @IsEmail()
   @Length(1, 100)
@@ -11,6 +11,12 @@ class UserInput {
   @Field()
   @Length(1, 100)
   password: string;
-}
 
-export default UserInput;
+  @Field({ nullable: true })
+  @Length(1, 100)
+  firstName: string;
+
+  @Field({ nullable: true })
+  @Length(1, 100)
+  lastName: string;
+}

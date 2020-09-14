@@ -1,17 +1,39 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
-import { Arg, Mutation, Query, Resolver } from 'type-graphql';
+/* eslint-disable max-classes-per-file */
+import {
+  Arg,
+  Field,
+  Mutation,
+  ObjectType,
+  Query,
+  Resolver,
+} from 'type-graphql';
 import argon2 from 'argon2';
 import { ValidationError } from 'class-validator';
 import { User, UserModel } from '../models/User';
-import UserInput from './userInput';
+import { RegisterInput } from './userInput';
 import { generateJwtToken } from '../helpers/auth';
+
+@ObjectType()
+class AuthResponse {
+  // TODO: extend this class with global `error?: ErrorType[];`
+
+  @Field(() => String, { nullable: true })
+  token?: string;
+
+  @Field(() => User, { nullable: true })
+  user?: User;
+}
 
 @Resolver((of) => User)
 class UserResolver {
   private readonly userModel = UserModel;
 
-  @Query((returns) => String)
-  async login(@Arg('input') { email, password }: UserInput): Promise<string> {
+  @Query((returns) => AuthResponse)
+  async login(
+    @Arg('password') password: string,
+    @Arg('email') email: string
+  ): Promise<AuthResponse> {
     const user = await this.userModel.findOne({ email });
 
     if (!user) {
@@ -26,23 +48,27 @@ class UserResolver {
       throw new ValidationError();
     }
 
-    return generateJwtToken(user);
+    const token = generateJwtToken(user);
+
+    return { user, token };
   }
 
-  @Mutation((returns) => String)
+  @Mutation((returns) => AuthResponse)
   async register(
-    @Arg('input') { email, password }: UserInput
-  ): Promise<string> {
-    const hashedPassword = await argon2.hash(password);
+    @Arg('registerInput') registerInput: RegisterInput
+  ): Promise<AuthResponse> {
+    const password = await argon2.hash(registerInput.password);
 
-    const newUser = await (
+    const user = await (
       await this.userModel.create({
-        email,
-        password: hashedPassword,
+        ...registerInput,
+        password,
       })
     ).save();
 
-    return generateJwtToken(newUser);
+    const token = generateJwtToken(user);
+
+    return { user, token };
   }
 }
 

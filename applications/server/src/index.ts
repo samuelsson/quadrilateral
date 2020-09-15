@@ -7,10 +7,12 @@ import { connect } from 'mongoose';
 // Load config (env variables) before everything else to ensure they are set.
 import './config';
 import resolvers from './resolvers';
+import { authChecker, getContext } from './helpers/auth';
 
 async function init(): Promise<void> {
   const schema = await buildSchema({
     resolvers,
+    authChecker,
     emitSchemaFile: true,
   });
 
@@ -25,10 +27,11 @@ async function init(): Promise<void> {
   const app = express();
 
   await app.use(
-    graphqlHTTP({
+    graphqlHTTP((req) => ({
       schema,
+      context: getContext(req),
       graphiql: true,
-    })
+    }))
   );
 
   app.listen(4000, () => console.log('Server running on port 4000'));

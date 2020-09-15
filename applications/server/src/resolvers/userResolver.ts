@@ -2,6 +2,7 @@
 /* eslint-disable max-classes-per-file */
 import {
   Arg,
+  Authorized,
   Field,
   Mutation,
   ObjectType,
@@ -16,8 +17,6 @@ import { generateJwtToken } from '../helpers/auth';
 
 @ObjectType()
 class AuthResponse {
-  // TODO: extend this class with global `error?: ErrorType[];`
-
   @Field(() => String, { nullable: true })
   token?: string;
 
@@ -55,7 +54,7 @@ class UserResolver {
 
   @Mutation((returns) => AuthResponse)
   async register(
-    @Arg('registerInput') registerInput: RegisterInput
+    @Arg('input') registerInput: RegisterInput
   ): Promise<AuthResponse> {
     const password = await argon2.hash(registerInput.password);
 
@@ -69,6 +68,13 @@ class UserResolver {
     const token = generateJwtToken(user);
 
     return { user, token };
+  }
+
+  @Authorized()
+  @Query((returns) => String)
+  // eslint-disable-next-line class-methods-use-this
+  test(): string {
+    return 'testing ok';
   }
 }
 

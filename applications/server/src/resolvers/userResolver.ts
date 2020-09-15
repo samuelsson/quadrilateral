@@ -2,7 +2,6 @@
 /* eslint-disable max-classes-per-file */
 import {
   Arg,
-  Authorized,
   Field,
   Mutation,
   ObjectType,
@@ -68,13 +67,6 @@ class UserResolver {
     const token = generateJwtToken(user);
 
     return { user, token };
-  }
-
-  @Authorized()
-  @Query((returns) => String)
-  // eslint-disable-next-line class-methods-use-this
-  test(): string {
-    return 'testing ok';
   }
 }
 

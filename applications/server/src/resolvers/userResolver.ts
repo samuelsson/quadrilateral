@@ -16,8 +16,6 @@ import { generateJwtToken } from '../helpers/auth';
 
 @ObjectType()
 class AuthResponse {
-  // TODO: extend this class with global `error?: ErrorType[];`
-
   @Field(() => String, { nullable: true })
   token?: string;
 
@@ -55,7 +53,7 @@ class UserResolver {
 
   @Mutation((returns) => AuthResponse)
   async register(
-    @Arg('registerInput') registerInput: RegisterInput
+    @Arg('input') registerInput: RegisterInput
   ): Promise<AuthResponse> {
     const password = await argon2.hash(registerInput.password);
 

@@ -9,7 +9,7 @@ type AuthResponse {
 }
 
 type Mutation {
-  register(registerInput: RegisterInput!): AuthResponse!
+  register(input: RegisterInput!): AuthResponse!
 }
 
 type Query {
@@ -29,4 +29,5 @@ type User {
   firstName: String
   id: ID!
   lastName: String
+  roles: [String!]!
 }

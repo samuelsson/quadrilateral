@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.5.0](https://github.com/Rektangel/quadrilateral/compare/linje-server@0.4.0...linje-server@0.5.0) (2020-09-22)
+
+
+### Features
+
+* 🎸 add auth guards and user role support ([83f42dd](https://github.com/Rektangel/quadrilateral/commit/83f42ddfd886bcb61adfdc8009539bf1181277aa))
+* 🎸 add auth response with first and last name ([07b60cf](https://github.com/Rektangel/quadrilateral/commit/07b60cfc5b9e3811e4d1417cf5d410cf04c63d74))
+
+
+
+
+
 # [0.4.0](https://github.com/Rektangel/quadrilateral/compare/linje-server@0.3.1...linje-server@0.4.0) (2020-09-11)
 
 

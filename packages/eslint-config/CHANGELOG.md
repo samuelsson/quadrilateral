@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.4.0](https://github.com/Rektangel/quadrilateral/compare/@rektangel/eslint-config@1.3.3...@rektangel/eslint-config@1.4.0) (2020-09-22)
+
+
+### Bug Fixes
+
+* 🐛 disable eslint no-shadow base rule ([d13e9e2](https://github.com/Rektangel/quadrilateral/commit/d13e9e223c90641c2bc078f05a682b0e05c9e252))
+
+
+### Features
+
+* 🎸 non-required prop-types don't need default props ([2052e2b](https://github.com/Rektangel/quadrilateral/commit/2052e2b825f5d2d880a4596f54569353a10e9dfe))
+
+
+
+
+
 ## [1.3.3](https://github.com/Rektangel/quadrilateral/compare/@rektangel/eslint-config@1.3.2...@rektangel/eslint-config@1.3.3) (2020-09-11)
 
 

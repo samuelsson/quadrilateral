@@ -1,0 +1,16 @@
+[data-theme="light"] {
+  --global-background-color: var(--color-white);
+  --global-color: var(--color-blue-gray-800);
+}
+
+[data-theme="dark"] {
+  --global-background-color: var(--color-blue-gray-800);
+  --global-color: var(--color-blue-gray-100);
+}
+
+
+body {
+  background-color: var(--global-background-color);
+  color: var(--global-color);
+  font-family: sans-serif;
+}

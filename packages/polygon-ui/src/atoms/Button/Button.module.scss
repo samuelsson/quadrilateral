@@ -1,0 +1,31 @@
+[data-theme="light"] {
+  --Button-background-color: var(--color-blue-gray-800);
+  --Button-color: var(--color-white);
+}
+
+[data-theme="dark"] {
+  --Button-background-color: var(--color-blue-gray-100);
+  --Button-color: var(--color-blue-gray-800);
+}
+
+.Button {
+  height: 48px;
+  border: none;
+  padding: 0 2rem;
+  border-radius: 5px;
+  font-weight: bold;
+  background-color: var(--Button-background-color);
+  color: var(--Button-color);
+  text-decoration: none;
+  text-transform: uppercase;
+
+  transition-property: background, border, color, box-shadow;
+  transition-timing-function: linear;
+  transition-duration: 0.2s;
+
+  &:hover:not(:disabled),
+  &:focus:not(:disabled),
+  &:active:not(:disabled) {
+    cursor: pointer;
+  }
+}

@@ -1,46 +1,32 @@
 import React from 'react';
-import styled, { css } from 'styled-components';
+import cn from 'classnames';
+import styles from './Heading.module.scss';
 
 export interface HeadingProps {
-  children: React.ReactChild;
+  children: React.ReactNode;
   center?: boolean;
 }
 
-const base = css`
-  margin-top: 2.5rem;
-  margin-bottom: 1rem;
-  ${(props: HeadingProps): string =>
-    props.center ? 'text-align: center;' : ''}
-`;
+export const H1 = ({ children, center }: HeadingProps): JSX.Element => (
+  <h1 className={cn(styles.H1, center && styles.Center)}>{children}</h1>
+);
 
-export const H1 = styled.h1<HeadingProps>`
-  ${base};
-  margin-top: 1.5rem;
-  margin-bottom: 1.5rem;
-  font-size: 1.8rem;
-`;
+export const H2 = ({ children, center }: HeadingProps): JSX.Element => (
+  <h2 className={cn(styles.H2, center && styles.Center)}>{children}</h2>
+);
 
-export const H2 = styled.h2<HeadingProps>`
-  ${base};
-  font-size: 1.4rem;
-`;
+export const H3 = ({ children, center }: HeadingProps): JSX.Element => (
+  <h3 className={cn(styles.H3, center && styles.Center)}>{children}</h3>
+);
 
-export const H3 = styled.h3<HeadingProps>`
-  ${base};
-  font-size: 1.2rem;
-`;
+export const H4 = ({ children, center }: HeadingProps): JSX.Element => (
+  <h4 className={cn(styles.H4, center && styles.Center)}>{children}</h4>
+);
 
-export const H4 = styled.h4<HeadingProps>`
-  ${base};
-  font-size: 1.1rem;
-`;
+export const H5 = ({ children, center }: HeadingProps): JSX.Element => (
+  <h5 className={cn(styles.H5, center && styles.Center)}>{children}</h5>
+);
 
-export const H5 = styled.h5<HeadingProps>`
-  ${base};
-  font-size: 1rem;
-`;
-
-export const H6 = styled.h6<HeadingProps>`
-  ${base};
-  font-size: 1rem;
-`;
+export const H6 = ({ children, center }: HeadingProps): JSX.Element => (
+  <h6 className={cn(styles.H6, center && styles.Center)}>{children}</h6>
+);

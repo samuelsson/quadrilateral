@@ -1,29 +1,14 @@
 import React from 'react';
-import { withThemesProvider } from 'storybook-addon-styled-component-theme';
+import './theme-toggle';
+import '../src/styles/global.scss';
 
-import { light, dark } from '../src/styles/themes'
-import GlobalStyles from '../src/styles/global';
-
-// All themes need a name property to be able to swap between them.
-const themes = [
-  {
-    name: 'light',
-    ...light,
-  },
-  {
-    name: 'dark',
-    ...dark,
-  },
-];
-
+// Does nothing at the moment but is kept in case we want to wrap something.
 const WrapperDecorator = ({ children }) => (
   <>
-    <GlobalStyles />
     {children}
   </>
 );
 
 export const decorators = [
   (Story) => <WrapperDecorator><Story/></WrapperDecorator>,
-  withThemesProvider(themes),
 ];

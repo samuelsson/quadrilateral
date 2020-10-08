@@ -20,7 +20,7 @@
     "@types/jest": "^26.0.14",
     "@types/jsonwebtoken": "^8.5.0",
     "@types/mongoose": "^5.7.36",
-    "@types/node": "^14.11.5",
+    "@types/node": "^14.11.6",
     "jest": "^26.5.2",
     "nodemon": "^2.0.4",
     "ts-jest": "^26.4.1",

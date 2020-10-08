@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Button renders with no errors 1`] = `
+<DocumentFragment>
+  <button
+    class="Button"
+    name="default-button"
+    type="button"
+  >
+    Hello
+  </button>
+</DocumentFragment>
+`;

@@ -14,7 +14,7 @@ export default {
     disabled: false,
   },
   argTypes: {
-    ...hideControls(['onClick']),
+    ...hideControls(['onClick', 'type', 'name']),
   },
 } as Meta;
 

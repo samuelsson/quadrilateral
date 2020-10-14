@@ -8,7 +8,9 @@
   "private": true,
   "scripts": {
     "lint": "tsc --noEmit && eslint ./ --ext .ts,.tsx,.js",
-    "dev": "next",
+    "prebuild": "next telemetry disable",
+    "predev": "next telemetry disable",
+    "dev": "next dev",
     "build": "next build",
     "start": "next start"
   },

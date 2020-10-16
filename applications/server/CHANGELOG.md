@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.6.0](https://github.com/Rektangel/quadrilateral/compare/linje-server@0.5.0...linje-server@0.6.0) (2020-10-16)
+
+
+### Features
+
+* 🎸 bump packages to latest ([e156561](https://github.com/Rektangel/quadrilateral/commit/e156561f9486ab8a052d0e451a199e6265f4d676))
+
+
+
+
+
 # [0.5.0](https://github.com/Rektangel/quadrilateral/compare/linje-server@0.4.0...linje-server@0.5.0) (2020-09-22)
 
 

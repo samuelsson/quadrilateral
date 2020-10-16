@@ -9,6 +9,7 @@
     "url": "git://github.com/Rektangel/quadrilateral.git"
   },
   "main": "dist/index.js",
+  "module": "dist/index.es.js",
   "files": [
     "dist"
   ],
@@ -21,7 +22,7 @@
     "react-component"
   ],
   "scripts": {
-    "build": "tsc",
+    "build": "rollup -c",
     "lint": "tsc --noEmit && eslint ./ --ext .ts,.tsx,.js",
     "prepare": "yarn run build",
     "prepublishOnly": "yarn run lint && yarn run jest --ci",
@@ -34,6 +35,8 @@
   },
   "devDependencies": {
     "@rektangel/eslint-config": "^1.4.0",
+    "@rollup/plugin-commonjs": "^15.1.0",
+    "@rollup/plugin-node-resolve": "^9.0.0",
     "@storybook/addon-essentials": "^6.0.26",
     "@storybook/addons": "^6.0.26",
     "@storybook/preset-scss": "^1.0.2",
@@ -46,9 +49,14 @@
     "css-loader": "^5.0.0",
     "identity-obj-proxy": "^3.0.0",
     "jest": "^26.5.3",
+    "node-sass": "^4.14.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
-    "sass": "^1.27.0",
+    "rollup": "^2.31.0",
+    "rollup-plugin-copy": "^3.3.0",
+    "rollup-plugin-peer-deps-external": "^2.2.3",
+    "rollup-plugin-postcss": "^3.1.8",
+    "rollup-plugin-typescript2": "^0.27.3",
     "sass-loader": "^10.0.3",
     "storybook-dark-mode": "^1.0.3",
     "style-loader": "^2.0.0",

@@ -9,7 +9,7 @@
     "url": "git://github.com/Rektangel/quadrilateral.git"
   },
   "main": "dist/index.js",
-  "module": "dist/index.es.js",
+  "module": "dist/index.esm.js",
   "files": [
     "dist"
   ],

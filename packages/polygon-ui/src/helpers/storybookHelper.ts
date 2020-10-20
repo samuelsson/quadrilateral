@@ -3,7 +3,6 @@ type HiddenArgTypes = {
 };
 
 // Used for hiding auto generated controls in stories.
-// Always hiding `theme`.
 export const hideControls = (args: string[]): HiddenArgTypes => {
   return args.reduce((result, item) => {
     return {

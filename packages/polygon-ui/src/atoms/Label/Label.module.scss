@@ -1,0 +1,12 @@
+.Label {
+  display: block;
+}
+
+.Error {
+  color: var(--color-red);
+}
+
+.Disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}

@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Label renders with no errors 1`] = `
+<DocumentFragment>
+  <label
+    class="Label"
+    for="input"
+  >
+    Label Text
+  </label>
+</DocumentFragment>
+`;

@@ -1,18 +1,16 @@
 /* eslint-disable react/jsx-props-no-spreading */
 import * as React from 'react';
 import { Story, Meta } from '@storybook/react';
-import { action } from '@storybook/addon-actions';
 import { hideControls } from '../../helpers/storybookHelper';
-import Input, { InputProps } from './Input';
+import FormInput, { FormInputProps } from './FormInput';
 
 export default {
-  component: Input,
-  title: 'Atoms / Input',
+  component: FormInput,
+  title: 'Molecules / FormInput',
   args: {
     name: 'input',
     type: 'text',
-    onChange: action('Input changed'),
-    placeholder: 'Placeholder',
+    label: 'Input Field',
   },
   argTypes: {
     type: {
@@ -21,10 +19,10 @@ export default {
         options: ['text', 'password'],
       },
     },
-    ...hideControls(['name', 'id', 'onChange']),
+    ...hideControls(['name']),
   },
 } as Meta;
 
-export const Default: Story<InputProps> = (args) => (
-  <Input name="input" {...args} />
+export const Default: Story<FormInputProps> = (args) => (
+  <FormInput name="input" {...args} />
 );

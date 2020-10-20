@@ -5,6 +5,7 @@ import styles from './Input.module.scss';
 export interface InputProps {
   name: string;
   type: string;
+  id?: string;
   disabled?: boolean;
   error?: boolean;
   placeholder?: string;
@@ -13,6 +14,7 @@ export interface InputProps {
 const Input = ({
   name,
   type,
+  id,
   disabled,
   error,
   placeholder,
@@ -20,6 +22,7 @@ const Input = ({
   <input
     name={name}
     type={type}
+    id={id}
     disabled={disabled}
     placeholder={placeholder}
     className={cn(styles.Input, error && styles.Error)}

@@ -15,6 +15,7 @@
   ],
   "scripts": {
     "bootstrap": "lerna bootstrap",
+    "prepare": "lerna run prepare",
     "clean": "lerna clean",
     "cm": "npx git-cz",
     "test": "lerna run test",

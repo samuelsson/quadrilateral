@@ -1,5 +1,4 @@
 import addons from '@storybook/addons';
-import '../src/styles/colors.css';
 
 const channel = addons.getChannel();
 

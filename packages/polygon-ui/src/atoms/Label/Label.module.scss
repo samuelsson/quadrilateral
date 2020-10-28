@@ -1,9 +1,11 @@
+@import "../../styles/colors";
+
 .Label {
   display: block;
 }
 
 .Error {
-  color: var(--color-red);
+  color: $color-red;
 }
 
 .Disabled {

@@ -1,11 +1,13 @@
+@import "../../styles/colors";
+
 [data-theme="light"] {
-  --Button-background-color: var(--color-blue-gray-800);
-  --Button-color: var(--color-white);
+  --Button-background-color: #{$color-blue-gray-800};
+  --Button-color: #{$color-white};
 }
 
 [data-theme="dark"] {
-  --Button-background-color: var(--color-blue-gray-100);
-  --Button-color: var(--color-blue-gray-800);
+  --Button-background-color: #{$color-blue-gray-100};
+  --Button-color: #{$color-blue-gray-800};
 }
 
 .Button {

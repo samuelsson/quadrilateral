@@ -1,12 +1,14 @@
+@import "../../styles/colors";
+
 [data-theme="light"] {
-  --Input-background-color: var(--color-white);
-  --Input-border-color: var(--color-gray-200);
-  --Input-box-shadow: 0 4px 15px var(--color-gray-300);
+  --Input-background-color: #{$color-white};
+  --Input-border-color: #{$color-blue-gray-200};
+  --Input-box-shadow: 0 4px 15px #{$color-gray-300};
 }
 
 [data-theme="dark"] {
-  --Input-background-color: var(--color-blue-gray-700);
-  --Input-border-color: var(--color-blue-gray-900);
+  --Input-background-color: #{$color-blue-gray-700};
+  --Input-border-color: #{$color-blue-gray-900};
   --Input-box-shadow: none;
 }
 
@@ -27,7 +29,7 @@
 
   &:focus:not(:disabled),
   &:active:not(:disabled) {
-    border-color: var(--color-blue);
+    border-color: $color-blue;
   }
 
   &:disabled {
@@ -37,5 +39,5 @@
 }
 
 .Error {
-  border-color: var(--color-red);
+  border-color: $color-red;
 }

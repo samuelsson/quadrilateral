@@ -20,14 +20,12 @@ yarn add --dev @rektangel/polygon-ui
 
 To be able to use all the components in your React application there are only to two things you need to ensure first.
 
-* Import `colors.css` to load all css variables used by the components
 * Add `data-theme="light"` to a higher ordered, wrapping element (preferably the body tag)
 
 After that you can use the components just as you are used to.
 
 ```javascript
 import React from 'react';
-import '@rektangel/polygon-ui/dist/styles/colors.css'
 import { Button, H1 } from '@rektangel/polygon-ui';
 
 const MyApp = () => (
@@ -44,4 +42,4 @@ export default MyApp;
 
 By changing the wrapping `data-theme` to another theme will use different css variables. You can currently use `light` or `dark` theme. You can toggle this dynamically and the components will render correctly in the browser.
 
-There is also a global style included in the package which is supposed to be used in conjunction with the components. Just add `import '@rektangel/polygon-ui/dist/styles/global.css'` in the same place as the `colors.css`.
+There is also a global style included in the package which is supposed to be used in conjunction with the components. Add `import '@rektangel/polygon-ui/dist/styles/global.scss'` in a wrapping component. If you want to use the colors in your own design/components they are included as scss variables in `@rektangel/polygon-ui/dist/styles/colors.scss`. **Please note that these are scss files that probably need to be compiled if used in your project.**

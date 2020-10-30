@@ -1,6 +1,6 @@
 {
   "name": "linje-server",
-  "version": "0.6.0",
+  "version": "0.6.1",
   "description": "API back-end for linje",
   "main": "index.js",
   "author": "@ErikSamuelsson",
@@ -15,7 +15,7 @@
     "extends": "@rektangel/eslint-config/node"
   },
   "devDependencies": {
-    "@rektangel/eslint-config": "^1.5.0",
+    "@rektangel/eslint-config": "^1.5.1",
     "@types/graphql": "^14.5.0",
     "@types/jest": "^26.0.15",
     "@types/jsonwebtoken": "^8.5.0",

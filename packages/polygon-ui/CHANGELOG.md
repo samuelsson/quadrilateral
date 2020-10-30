@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.7.0](https://github.com/Rektangel/quadrilateral/compare/@rektangel/polygon-ui@0.6.0...@rektangel/polygon-ui@0.7.0) (2020-10-30)
+
+
+### Features
+
+* 🎸 add label atom and new input molecule ([9d46a98](https://github.com/Rektangel/quadrilateral/commit/9d46a98e0be2d66ba5b27b16cb90d0055d15b61a))
+
+
+
+
+
 # [0.6.0](https://github.com/Rektangel/quadrilateral/compare/@rektangel/polygon-ui@0.5.5...@rektangel/polygon-ui@0.6.0) (2020-10-16)
 
 

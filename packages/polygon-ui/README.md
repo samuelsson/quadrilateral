@@ -42,4 +42,10 @@ export default MyApp;
 
 By changing the wrapping `data-theme` to another theme will use different css variables. You can currently use `light` or `dark` theme. You can toggle this dynamically and the components will render correctly in the browser.
 
-There is also a global style included in the package which is supposed to be used in conjunction with the components. Add `import '@rektangel/polygon-ui/dist/styles/global.scss'` in a wrapping component. If you want to use the colors in your own design/components they are included as scss variables in `@rektangel/polygon-ui/dist/styles/colors.scss`. **Please note that these are scss files that probably need to be compiled if used in your project.**
+There is also a global style included in the package which is supposed to be used in conjunction with the components. Add `import '@rektangel/polygon-ui/dist/styles/global.css'` in a wrapping component.
+
+If you want to use the colors or variables in your own design/components they are included as scss variables in `@rektangel/polygon-ui/dist/styles/colors.scss` / `[...]/variables.scss`. **Note that these are scss files that probably need to be compiled if used in your project.**
+
+## Development
+
+When building, all styles are copied (and some compiled) from `src/styles` to `dist/styles`. This is done in `rollup.config.js` so if you are changing or adding styles this file needs to be updated to include the new ones.

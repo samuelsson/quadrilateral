@@ -40,14 +40,11 @@ export default {
           src: 'src/styles/*.scss',
           dest: 'dist/styles',
           rename: (name) => `${name}.css`,
-          transform: (contents) => {
-            const result = renderSync({
+          transform: (contents) =>
+            renderSync({
               data: contents.toString(),
               includePaths: [path.join(__dirname, '/src/styles')],
-            });
-
-            return result.css;
-          },
+            }).css,
         },
       ],
     }),

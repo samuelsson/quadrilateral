@@ -48,4 +48,6 @@ If you want to use the colors or variables in your own design/components they ar
 
 ## Development
 
-When building, all styles are copied (and some compiled) from `src/styles` to `dist/styles`. This is done in `rollup.config.js` so if you are changing or adding styles this file needs to be updated to include the new ones.
+### Styles
+
+Everything matching `src/styles/*.scss` will be compiled to css and copied to `/dist/styles`, to be used directly in the application. Files under `src/styles/abstracts` will **not** be compiled, the folder is just copied to `dist/styles`.

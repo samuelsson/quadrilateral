@@ -33,18 +33,19 @@ export default {
     copy({
       targets: [
         {
-          src: ['src/styles/colors.scss', 'src/styles/variables.scss'],
+          src: 'src/styles/abstracts/*',
           dest: 'dist/styles',
         },
         {
-          src: 'src/styles/global.scss',
+          src: 'src/styles/*.scss',
           dest: 'dist/styles',
-          rename: 'global.css',
+          rename: (name) => `${name}.css`,
           transform: (contents) => {
             const result = renderSync({
               data: contents.toString(),
               includePaths: [path.join(__dirname, '/src/styles')],
             });
+
             return result.css;
           },
         },

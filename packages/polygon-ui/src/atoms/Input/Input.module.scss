@@ -1,12 +1,12 @@
-@import "../../styles/abstracts/colors";
+@import '../../styles/abstracts/colors';
 
-[data-theme="light"] {
+[data-theme='light'] {
   --Input-background-color: #{$color-white};
   --Input-border-color: #{$color-blue-gray-200};
   --Input-box-shadow: 0 4px 15px #{$color-gray-300};
 }
 
-[data-theme="dark"] {
+[data-theme='dark'] {
   --Input-background-color: #{$color-blue-gray-700};
   --Input-border-color: #{$color-blue-gray-900};
   --Input-box-shadow: none;

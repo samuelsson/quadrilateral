@@ -1,18 +1,18 @@
-@import "../../styles/abstracts/colors";
+@import '../../styles/abstracts/colors';
 
-[data-theme="light"] {
+[data-theme='light'] {
   --Button-background-color: #{$color-blue-gray-800};
   --Button-color: #{$color-white};
 }
 
-[data-theme="dark"] {
+[data-theme='dark'] {
   --Button-background-color: #{$color-blue-gray-100};
   --Button-color: #{$color-blue-gray-800};
 }
 
 .Button {
   height: 48px;
-  border: none;
+  border: 0;
   padding: 0 2rem;
   border-radius: 5px;
   font-weight: bold;

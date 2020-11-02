@@ -1,11 +1,11 @@
-@import "./abstracts/colors";
+@import './abstracts/colors';
 
-[data-theme="light"] {
+[data-theme='light'] {
   --global-background-color: #{$color-white};
   --global-color: #{$color-blue-gray-800};
 }
 
-[data-theme="dark"] {
+[data-theme='dark'] {
   --global-background-color: #{$color-blue-gray-800};
   --global-color: #{$color-blue-gray-100};
 }

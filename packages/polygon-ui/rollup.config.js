@@ -6,20 +6,18 @@ import typescript from 'rollup-plugin-typescript2';
 import postcss from 'rollup-plugin-postcss';
 import copy from 'rollup-plugin-copy';
 import { renderSync } from 'node-sass';
-
-// eslint-disable-next-line @typescript-eslint/no-var-requires
-const packageJson = require('./package.json');
+import pkg from './package.json';
 
 export default {
   input: './src/index.ts',
   output: [
     {
-      file: packageJson.main,
+      file: pkg.main,
       format: 'cjs',
       sourcemap: true,
     },
     {
-      file: packageJson.module,
+      file: pkg.module,
       format: 'esm',
       sourcemap: true,
     },

@@ -1,8 +1,10 @@
 # polygon-ui
 
-React component library for Rektangel
+React component library for Quadrilateral
 
 ## Installation
+
+**This theme is not published anymore but I'll keep the old installation process her for now.**
 
 First we need to make sure we have all peer dependencies (like React) installed:
 

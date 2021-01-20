@@ -12,10 +12,10 @@
     "lint": "tsc --noEmit && eslint ./ --ext .js,.ts"
   },
   "eslintConfig": {
-    "extends": "@rektangel/eslint-config/node"
+    "extends": "@samuelsson/eslint-config/node"
   },
   "devDependencies": {
-    "@rektangel/eslint-config": "^1.5.1",
+    "@samuelsson/eslint-config": "^1.5.1",
     "@types/graphql": "^14.5.0",
     "@types/jest": "^26.0.20",
     "@types/jsonwebtoken": "^8.5.0",

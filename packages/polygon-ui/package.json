@@ -1,12 +1,13 @@
 {
-  "name": "@rektangel/polygon-ui",
+  "name": "polygon-ui",
   "version": "0.7.0",
-  "description": "UI library for Rektangel",
-  "author": "@ErikSamuelsson",
+  "description": "UI library for Quadrilateral",
+  "author": "Erik Samuelsson",
   "license": "MIT",
+  "private": true,
   "repository": {
     "type": "git",
-    "url": "git://github.com/Rektangel/quadrilateral.git"
+    "url": "git://github.com/samuelsson/quadrilateral.git"
   },
   "main": "dist/index.js",
   "module": "dist/index.esm.js",
@@ -31,7 +32,7 @@
     "test:watch": "jest --watch"
   },
   "eslintConfig": {
-    "extends": "@rektangel/eslint-config"
+    "extends": "@samuelsson/eslint-config"
   },
   "stylelint": {
     "extends": "stylelint-config-sass-guidelines",
@@ -41,7 +42,7 @@
     }
   },
   "devDependencies": {
-    "@rektangel/eslint-config": "^1.5.1",
+    "@samuelsson/eslint-config": "^1.5.1",
     "@rollup/plugin-commonjs": "^17.0.0",
     "@rollup/plugin-node-resolve": "^11.1.0",
     "@storybook/addon-essentials": "^6.1.14",

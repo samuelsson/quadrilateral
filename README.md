@@ -1,6 +1,6 @@
 # Quadrilateral
 
-Monorepo for Rektangel packages and applications.
+Monorepo for some application :)
 
 ## Getting Started
 

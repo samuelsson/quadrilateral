@@ -1,7 +1,7 @@
 {
-  "name": "@rektangel/eslint-config",
+  "name": "@samuelsson/eslint-config",
   "version": "1.5.1",
-  "description": "eslint and prettier config for all Rektangel projects",
+  "description": "eslint and prettier config for quadlirateral projects, and other",
   "main": "index.js",
   "files": [
     "index.js",
@@ -14,11 +14,11 @@
     "eslint",
     "eslint-config"
   ],
-  "author": "@ErikSamuelsson",
+  "author": "Erik Samuelsson",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git://github.com/Rektangel/quadrilateral.git"
+    "url": "git://github.com/samuelsson/quadrilateral.git"
   },
   "publishConfig": {
     "access": "public"

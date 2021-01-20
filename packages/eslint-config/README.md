@@ -7,7 +7,7 @@ This is for projects with TypeScript, Prettier and React.
 To be able to use this config we need to install `prettier` and `eslint` together with plugins and rules sets. We can do that with one command.
 
 ```shell
-npx install-peerdeps @rektangel/eslint-config --dev --yarn
+npx install-peerdeps @samuelsson/eslint-config --dev --yarn
 ```
 
 This will install all required dependencies as devDependencies in your project. At the moment everything is included here and if you know what you are doing you can install just the ones you need manually. For example if you are not using React you can skip the `eslint-plugin-react`.
@@ -15,7 +15,7 @@ This will install all required dependencies as devDependencies in your project. 
 The above command will install all peer-deps together with the actual package (this package, you are reading about). If you want to install it yourself you can do that with:
 
 ```shell
-yarn add --dev @rektangel/eslint-config
+yarn add --dev @samuelsson/eslint-config
 ```
 
 When the config is installed we need to enable it. Add this property to your `package.json`:
@@ -23,7 +23,7 @@ When the config is installed we need to enable it. Add this property to your `pa
 ```json
 {
   "eslintConfig": {
-    "extends": "@rektangel/eslint-config"
+    "extends": "@samuelsson/eslint-config"
   }
 }
 ```

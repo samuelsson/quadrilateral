@@ -19,7 +19,7 @@ export class User {
 
   @Field()
   @Property({ required: true, unique: true })
-  email: string;
+  username: string;
 
   @Field((type) => [String])
   @Property({
@@ -33,14 +33,6 @@ export class User {
   // This has no `@Field()`, so the property is not public in the schema
   @Property({ required: true })
   password: string;
-
-  @Field({ nullable: true })
-  @Property()
-  firstName?: string;
-
-  @Field({ nullable: true })
-  @Property()
-  lastName?: string;
 }
 
 export const UserModel = getModelForClass(User);

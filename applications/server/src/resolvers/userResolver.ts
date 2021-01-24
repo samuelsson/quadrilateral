@@ -30,9 +30,9 @@ class UserResolver {
   @Query((returns) => AuthResponse)
   async login(
     @Arg('password') password: string,
-    @Arg('email') email: string
+    @Arg('username') username: string
   ): Promise<AuthResponse> {
-    const user = await this.userModel.findOne({ email });
+    const user = await this.userModel.findOne({ username });
 
     if (!user) {
       // TODO: Throw correct error for no user found

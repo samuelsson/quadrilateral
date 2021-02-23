@@ -79,7 +79,7 @@
     "rollup-plugin-peer-deps-external": "^2.2.4",
     "rollup-plugin-postcss": "^4.0.0",
     "rollup-plugin-typescript2": "^0.30.0",
-    "sass-loader": "^11.0.1",
+    "sass-loader": "^10.1.1",
     "storybook-dark-mode": "^1.0.4",
     "style-loader": "^2.0.0",
     "stylelint": "^13.11.0",

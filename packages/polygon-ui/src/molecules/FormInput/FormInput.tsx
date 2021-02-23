@@ -1,30 +1,30 @@
 import React from 'react';
-import Input from '../../atoms/Input';
+import Input, { InputProps } from '../../atoms/Input';
 import Label from '../../atoms/Label';
 
-export interface FormInputProps {
-  name: string;
-  type: string;
+export interface FormInputProps extends InputProps {
   label: string;
-  error?: boolean;
-  disabled?: boolean;
 }
 
 const FormInput = ({
   name,
   type,
+  value,
   label,
   error,
   disabled,
+  onChange,
 }: FormInputProps): JSX.Element => (
   <div>
     <Label text={label} htmlFor={name} error={error} disabled={disabled} />
     <Input
       name={name}
       type={type}
+      value={value}
       id={name}
       error={error}
       disabled={disabled}
+      onChange={onChange}
     />
   </div>
 );

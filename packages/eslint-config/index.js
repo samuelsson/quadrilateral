@@ -7,7 +7,6 @@ module.exports = {
     'plugin:@typescript-eslint/recommended',
     'plugin:import/typescript',
     'plugin:jsx-a11y/recommended',
-    'prettier/@typescript-eslint',
 
     // This extension does the following so we don't have to set it manually:
     // - Enables eslint-plugin-prettier under `plugins`.

@@ -6,6 +6,7 @@ exports[`Input renders with no errors 1`] = `
     class="Input"
     name="input"
     type="text"
+    value=""
   />
 </DocumentFragment>
 `;

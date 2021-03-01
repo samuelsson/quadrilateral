@@ -14,6 +14,7 @@ exports[`FormInput renders with no errors 1`] = `
       id="input"
       name="input"
       type="text"
+      value=""
     />
   </div>
 </DocumentFragment>

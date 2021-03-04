@@ -3,6 +3,7 @@ import express from 'express';
 import { graphqlHTTP } from 'express-graphql';
 import { buildSchema } from 'type-graphql';
 import { connect } from 'mongoose';
+import cors from 'cors';
 
 // Load config (env variables) before everything else to ensure they are set.
 import './config';
@@ -25,6 +26,13 @@ async function init(): Promise<void> {
   await mongoose.connection;
 
   const app = express();
+
+  await app.use(
+    cors({
+      origin: process.env.ALLOW_ORIGIN,
+      credentials: true,
+    })
+  );
 
   await app.use(
     graphqlHTTP((req) => ({

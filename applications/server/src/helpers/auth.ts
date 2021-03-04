@@ -1,23 +1,56 @@
 import { Request } from 'express';
 import { AuthChecker } from 'type-graphql';
-import jwt from 'jsonwebtoken';
+import jwt, { Algorithm, SignOptions, VerifyOptions } from 'jsonwebtoken';
 import { User, UserRole } from '../models/User';
 
-const { JWT_SECRET, JWT_EXPIRE_TIME } = process.env;
+const { JWT_SECRET, JWT_EXPIRE_TIME, JWT_ALGORITHM } = process.env;
 
 interface JwtPayload {
   id: string;
   roles: UserRole[];
+  username: string;
 }
 
-interface Context {
+export interface Context {
   user: JwtPayload | null;
 }
 
-export const generateJwtToken = ({ id, roles }: User): string => {
-  const payload: JwtPayload = { id, roles };
+const getTokenFromRequest = (req: Request): string | undefined => {
+  // Using NextAuth.js session token sent with cookie instead of Bearer.
+  const tokenRegex = /next-auth\.session-token=(\S+)/;
+  const cookie = req.get('cookie');
 
-  return jwt.sign(payload, JWT_SECRET, { expiresIn: JWT_EXPIRE_TIME });
+  if (cookie && cookie.match(tokenRegex)?.length > 1) {
+    return cookie.match(tokenRegex)[1];
+  }
+
+  return undefined;
+};
+
+const decodeToken = (token: string): JwtPayload => {
+  if (token) {
+    const options: VerifyOptions = {
+      algorithms: [JWT_ALGORITHM as Algorithm],
+    };
+
+    try {
+      return jwt.verify(token, JWT_SECRET, options) as JwtPayload;
+    } catch {
+      return null;
+    }
+  }
+
+  return null;
+};
+
+export const generateJwtToken = ({ id, roles, username }: User): string => {
+  const payload: JwtPayload = { id, roles, username };
+  const options: SignOptions = {
+    expiresIn: JWT_EXPIRE_TIME,
+    algorithm: JWT_ALGORITHM as Algorithm,
+  };
+
+  return jwt.sign(payload, JWT_SECRET, options);
 };
 
 export const authChecker: AuthChecker<Context> = ({ context }, roles) => {
@@ -35,13 +68,8 @@ export const authChecker: AuthChecker<Context> = ({ context }, roles) => {
 };
 
 export const getContext = (req: Request): Context => {
-  const authorization = req.get('Authorization');
+  const token = getTokenFromRequest(req);
+  const jwtPayload = decodeToken(token);
 
-  if (authorization) {
-    const token = authorization.replace('Bearer ', '');
-    const jwtPayload = jwt.verify(token, process.env.JWT_SECRET) as JwtPayload;
-    return { user: jwtPayload };
-  }
-
-  return { user: null };
+  return { user: jwtPayload };
 };

@@ -3,22 +3,23 @@
 # !!!   DO NOT MODIFY THIS FILE BY YOURSELF   !!!
 # -----------------------------------------------
 
+input AuthInput {
+  password: String!
+  username: String!
+}
+
 type AuthResponse {
   token: String
   user: User
 }
 
 type Mutation {
-  register(input: RegisterInput!): AuthResponse!
+  login(password: String!, username: String!): AuthResponse!
+  register(input: AuthInput!): AuthResponse!
 }
 
 type Query {
-  login(password: String!, username: String!): AuthResponse!
-}
-
-input RegisterInput {
-  password: String!
-  username: String!
+  profile: User!
 }
 
 """The User model"""

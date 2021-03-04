@@ -5,9 +5,9 @@ import { Length } from 'class-validator';
 export class AuthInput {
   @Field()
   @Length(1, 50)
-  username: string;
+  username!: string;
 
   @Field()
   @Length(1, 100)
-  password: string;
+  password!: string;
 }

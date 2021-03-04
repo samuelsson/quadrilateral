@@ -3,7 +3,7 @@ import { AuthChecker } from 'type-graphql';
 import jwt, { Algorithm, SignOptions, VerifyOptions } from 'jsonwebtoken';
 import { User, UserRole } from '../models/User';
 
-const { JWT_SECRET, JWT_EXPIRE_TIME, JWT_ALGORITHM } = process.env;
+const { JWT_SECRET = '', JWT_EXPIRE_TIME, JWT_ALGORITHM } = process.env;
 
 export interface JwtPayload {
   id: string;
@@ -20,14 +20,14 @@ export const getTokenFromRequest = (req: Request): string | undefined => {
   const tokenRegex = /next-auth\.session-token=(\S+)/;
   const cookie = req.get('cookie');
 
-  if (cookie && cookie.match(tokenRegex)?.length > 1) {
-    return cookie.match(tokenRegex)[1];
+  if (!!cookie && cookie.match(tokenRegex)?.length) {
+    return cookie.match(tokenRegex)?.[1];
   }
 
   return undefined;
 };
 
-export const decodeToken = (token: string | undefined): JwtPayload => {
+export const decodeToken = (token: string | undefined): JwtPayload | null => {
   if (token) {
     const options: VerifyOptions = {
       algorithms: [JWT_ALGORITHM as Algorithm],

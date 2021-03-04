@@ -1,16 +1,11 @@
 import { ResolverData } from 'type-graphql';
+import { Request } from 'express';
 import { authChecker, Context, getTokenFromRequest, JwtPayload } from './auth';
 import { UserRole } from '../models/User';
 
-function reqGet(header: string) {
-  return this.headers?.[header];
-}
-
-const mockedRequestWithCookie = (cookie: string) => ({
-  headers: {
-    cookie,
-  },
-  get: reqGet,
+const mockedRequest = (cookie: string | undefined) => ({
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  get: (_: string) => cookie,
 });
 
 const mockedUser = (roles: UserRole[] = []) => ({
@@ -19,40 +14,36 @@ const mockedUser = (roles: UserRole[] = []) => ({
   username: 'Bob',
 });
 
-const mockedContext = (user: JwtPayload) =>
+const mockedContext = (user: JwtPayload | null) =>
   ({ context: { user } } as ResolverData<Context>);
 
 describe('getTokenFromRequest()', () => {
   it('should return a token if present in cookies', () => {
     const cookie1 = 'key=val next-auth.session-token=ab12.cd34.ef56 key2=v.a.l';
     const cookie2 = 'auth.session-token=12 next-auth.session-token=hello123!';
-    const cookie3 = 'key=val key2=v.a.l next-auth.session-token=.....';
+    const cookie3 = 'key=val key2=v.a.l next-auth.session-token=....X.';
     const cookie4 = ' next-auth.session-token=x  ';
-    const token1 = getTokenFromRequest(mockedRequestWithCookie(cookie1));
-    const token2 = getTokenFromRequest(mockedRequestWithCookie(cookie2));
-    const token3 = getTokenFromRequest(mockedRequestWithCookie(cookie3));
-    const token4 = getTokenFromRequest(mockedRequestWithCookie(cookie4));
+    const token1 = getTokenFromRequest(mockedRequest(cookie1) as Request);
+    const token2 = getTokenFromRequest(mockedRequest(cookie2) as Request);
+    const token3 = getTokenFromRequest(mockedRequest(cookie3) as Request);
+    const token4 = getTokenFromRequest(mockedRequest(cookie4) as Request);
     expect(token1).toBe('ab12.cd34.ef56');
     expect(token2).toBe('hello123!');
-    expect(token3).toBe('.....');
+    expect(token3).toBe('....X.');
     expect(token4).toBe('x');
   });
 
   it('should return empty if no token in cookies', () => {
     const cookie1 = 'session-token=hey';
     const cookie2 = 'token=hey';
-    const token1 = getTokenFromRequest(mockedRequestWithCookie(cookie1));
-    const token2 = getTokenFromRequest(mockedRequestWithCookie(cookie2));
+    const token1 = getTokenFromRequest(mockedRequest(cookie1) as Request);
+    const token2 = getTokenFromRequest(mockedRequest(cookie2) as Request);
     expect(token1).toBeUndefined();
     expect(token2).toBeUndefined();
   });
 
   it('should return empty if no cookies', () => {
-    const mockedRequestWithoutCookie = {
-      headers: {},
-      get: reqGet,
-    };
-    const token = getTokenFromRequest(mockedRequestWithoutCookie);
+    const token = getTokenFromRequest(mockedRequest(undefined) as Request);
     expect(token).toBeUndefined();
   });
 });

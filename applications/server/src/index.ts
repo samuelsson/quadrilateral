@@ -1,5 +1,5 @@
 import 'reflect-metadata';
-import express from 'express';
+import express, { Request } from 'express';
 import { graphqlHTTP } from 'express-graphql';
 import { buildSchema } from 'type-graphql';
 import { connect } from 'mongoose';
@@ -37,7 +37,7 @@ async function init(): Promise<void> {
   await app.use(
     graphqlHTTP((req) => ({
       schema,
-      context: getContext(req),
+      context: getContext(req as Request),
       graphiql: true,
     }))
   );

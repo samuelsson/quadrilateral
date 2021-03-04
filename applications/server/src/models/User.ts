@@ -15,11 +15,11 @@ registerEnumType(UserRole, {
 @ObjectType({ description: 'The User model' })
 export class User {
   @Field(() => ID)
-  id: string;
+  id!: string;
 
   @Field()
   @Property({ required: true, unique: true })
-  username: string;
+  username!: string;
 
   @Field((type) => [String])
   @Property({
@@ -28,11 +28,11 @@ export class User {
     default: [UserRole.USER],
     enum: UserRole,
   })
-  roles?: UserRole[];
+  roles!: UserRole[];
 
   // This has no `@Field()`, so the property is not public in the schema
   @Property({ required: true })
-  password: string;
+  password!: string;
 }
 
 export const UserModel = getModelForClass(User);

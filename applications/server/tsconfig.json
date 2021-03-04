@@ -11,7 +11,7 @@
     "outDir": "dist",
     "skipLibCheck": true,
     "declaration": false,
-    "strict": false,
+    "strict": true,
     "moduleResolution": "node",
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,

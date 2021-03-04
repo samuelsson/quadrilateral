@@ -1,4 +1,7 @@
 module.exports = {
+  // The test environment that will be used for testing.
+  testEnvironment: 'node',
+
   // The root of your source code, typically /src
   // `<rootDir>` is a token Jest substitutes
   roots: ['<rootDir>/src'],

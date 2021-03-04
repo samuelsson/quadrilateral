@@ -9,7 +9,8 @@
   "scripts": {
     "dev": "nodemon",
     "start": "ts-node src/index.ts",
-    "lint": "tsc --noEmit && eslint ./ --ext .js,.ts"
+    "lint": "tsc --noEmit && eslint ./ --ext .js,.ts",
+    "test": "jest"
   },
   "eslintConfig": {
     "extends": "@samuelsson/eslint-config/node"

@@ -5,7 +5,7 @@ import { User, UserRole } from '../models/User';
 
 const { JWT_SECRET, JWT_EXPIRE_TIME, JWT_ALGORITHM } = process.env;
 
-interface JwtPayload {
+export interface JwtPayload {
   id: string;
   roles: UserRole[];
   username: string;
@@ -15,7 +15,7 @@ export interface Context {
   user: JwtPayload | null;
 }
 
-const getTokenFromRequest = (req: Request): string | undefined => {
+export const getTokenFromRequest = (req: Request): string | undefined => {
   // Using NextAuth.js session token sent with cookie instead of Bearer.
   const tokenRegex = /next-auth\.session-token=(\S+)/;
   const cookie = req.get('cookie');
@@ -27,7 +27,7 @@ const getTokenFromRequest = (req: Request): string | undefined => {
   return undefined;
 };
 
-const decodeToken = (token: string): JwtPayload => {
+export const decodeToken = (token: string | undefined): JwtPayload => {
   if (token) {
     const options: VerifyOptions = {
       algorithms: [JWT_ALGORITHM as Algorithm],
@@ -53,7 +53,10 @@ export const generateJwtToken = ({ id, roles, username }: User): string => {
   return jwt.sign(payload, JWT_SECRET, options);
 };
 
-export const authChecker: AuthChecker<Context> = ({ context }, roles) => {
+export const authChecker: AuthChecker<Context, UserRole> = (
+  { context },
+  roles
+) => {
   const { user } = context;
 
   // @Authorized()
@@ -64,7 +67,7 @@ export const authChecker: AuthChecker<Context> = ({ context }, roles) => {
 
   // @Authorized('XXX')
   // Needs a specific role - user is logged in and has that role
-  return user && user.roles.some((role) => roles.includes(role));
+  return !!user && user.roles.some((role) => roles.includes(role));
 };
 
 export const getContext = (req: Request): Context => {

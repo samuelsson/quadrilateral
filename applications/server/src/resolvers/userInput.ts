@@ -2,7 +2,7 @@ import { Field, InputType } from 'type-graphql';
 import { Length } from 'class-validator';
 
 @InputType()
-export class RegisterInput {
+export class AuthInput {
   @Field()
   @Length(1, 50)
   username: string;

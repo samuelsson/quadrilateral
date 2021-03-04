@@ -2,17 +2,19 @@
 /* eslint-disable max-classes-per-file */
 import {
   Arg,
+  Ctx,
   Field,
   Mutation,
   ObjectType,
   Query,
   Resolver,
+  UnauthorizedError,
 } from 'type-graphql';
 import argon2 from 'argon2';
 import { ValidationError } from 'class-validator';
 import { User, UserModel } from '../models/User';
-import { RegisterInput } from './userInput';
-import { generateJwtToken } from '../helpers/auth';
+import { AuthInput } from './userInput';
+import { Context, generateJwtToken } from '../helpers/auth';
 
 @ObjectType()
 class AuthResponse {
@@ -27,7 +29,7 @@ class AuthResponse {
 class UserResolver {
   private readonly userModel = UserModel;
 
-  @Query((returns) => AuthResponse)
+  @Mutation((returns) => AuthResponse)
   async login(
     @Arg('password') password: string,
     @Arg('username') username: string
@@ -53,7 +55,7 @@ class UserResolver {
 
   @Mutation((returns) => AuthResponse)
   async register(
-    @Arg('input') registerInput: RegisterInput
+    @Arg('input') registerInput: AuthInput
   ): Promise<AuthResponse> {
     const password = await argon2.hash(registerInput.password);
 
@@ -67,6 +69,18 @@ class UserResolver {
     const token = generateJwtToken(user);
 
     return { user, token };
+  }
+
+  @Query((returns) => User)
+  async profile(@Ctx() ctx: Context): Promise<User> {
+    if (!ctx?.user?.id) {
+      throw new UnauthorizedError();
+    }
+
+    // TODO: Fix if no user found
+    const user = await this.userModel.findById(ctx?.user?.id);
+
+    return user;
   }
 }
 

@@ -29,6 +29,7 @@ class AuthResponse {
 class UserResolver {
   private readonly userModel = UserModel;
 
+  // `(returns) => AuthResponse` is needed since login() return a Promise<>
   @Mutation((returns) => AuthResponse)
   async login(
     @Arg('password') password: string,

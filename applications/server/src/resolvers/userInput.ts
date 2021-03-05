@@ -1,8 +1,9 @@
 import { Field, InputType } from 'type-graphql';
 import { Length } from 'class-validator';
+import { User } from '../models/User';
 
 @InputType()
-export class AuthInput {
+export class AuthInput implements Partial<User>{
   @Field()
   @Length(1, 50)
   username!: string;

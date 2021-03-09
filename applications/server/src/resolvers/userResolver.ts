@@ -8,12 +8,11 @@ import {
   ObjectType,
   Query,
   Resolver,
-  UnauthorizedError,
 } from 'type-graphql';
 import argon2 from 'argon2';
 import { ValidationError } from 'class-validator';
 import { User, UserModel } from '../models/User';
-import { AuthInput } from './userInput';
+import { RegisterInput } from './userInput';
 import { Context, generateJwtToken } from '../helpers/auth';
 
 @ObjectType()
@@ -56,7 +55,7 @@ class UserResolver {
 
   @Mutation((returns) => AuthResponse)
   async register(
-    @Arg('input') registerInput: AuthInput
+    @Arg('input') registerInput: RegisterInput
   ): Promise<AuthResponse> {
     const password = await argon2.hash(registerInput.password);
 
@@ -75,11 +74,15 @@ class UserResolver {
   @Query((returns) => User)
   async profile(@Ctx() ctx: Context): Promise<User> {
     if (!ctx?.user?.id) {
-      throw new UnauthorizedError();
+      throw new Error('Not found');
     }
 
     // TODO: Fix if no user found
     const user = await this.userModel.findById(ctx?.user?.id);
+
+    if (!user) {
+      throw new Error('Not found');
+    }
 
     return user;
   }

@@ -3,27 +3,33 @@
 # !!!   DO NOT MODIFY THIS FILE BY YOURSELF   !!!
 # -----------------------------------------------
 
-input AuthInput {
-  password: String!
-  username: String!
-}
-
 type AuthResponse {
   token: String
   user: User
 }
 
+"""
+The javascript `Date` as string. Type represents date and time as the ISO Date string.
+"""
+scalar DateTime
+
 type Mutation {
   login(password: String!, username: String!): AuthResponse!
-  register(input: AuthInput!): AuthResponse!
+  register(input: RegisterInput!): AuthResponse!
 }
 
 type Query {
   profile: User!
 }
 
+input RegisterInput {
+  password: String!
+  username: String!
+}
+
 """The User model"""
 type User {
+  createdAt: DateTime!
   id: ID!
   roles: [String!]!
   username: String!

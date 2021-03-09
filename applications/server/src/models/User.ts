@@ -1,6 +1,7 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 import { Field, ID, ObjectType, registerEnumType } from 'type-graphql';
 import { prop as Property, getModelForClass } from '@typegoose/typegoose';
+import { TimeStamps } from '@typegoose/typegoose/lib/defaultClasses';
 
 export enum UserRole {
   ADMIN = 'ADMIN',
@@ -13,9 +14,9 @@ registerEnumType(UserRole, {
 });
 
 @ObjectType({ description: 'The User model' })
-export class User {
+export class User extends TimeStamps {
   @Field(() => ID)
-  id!: string;
+  readonly id!: string;
 
   @Field()
   @Property({ required: true, unique: true })
@@ -33,6 +34,9 @@ export class User {
   // This has no `@Field()`, so the property is not public in the schema
   @Property({ required: true })
   password!: string;
+
+  @Field()
+  readonly createdAt!: Date;
 }
 
 export const UserModel = getModelForClass(User);

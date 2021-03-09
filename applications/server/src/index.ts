@@ -10,6 +10,8 @@ import './config';
 import resolvers from './resolvers';
 import { authChecker, getContext } from './helpers/auth';
 
+const { DB_HOST, DB_NAME, DB_PORT } = process.env;
+
 async function init(): Promise<void> {
   const schema = await buildSchema({
     resolvers,
@@ -18,7 +20,7 @@ async function init(): Promise<void> {
   });
 
   // create mongoose connection
-  const mongoose = await connect('mongodb://localhost:27017/data', {
+  const mongoose = await connect(`mongodb://${DB_HOST}:${DB_PORT}/${DB_NAME}`, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
     useCreateIndex: true,

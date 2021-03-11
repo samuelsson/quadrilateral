@@ -1,0 +1,19 @@
+@import '../../styles/abstracts/variables';
+
+.DefaultTemplate {
+  display: grid;
+
+  grid-template-areas:
+    "header header  header"
+    ".      content ."
+    "footer footer  footer";
+
+  grid-template-rows: auto 1fr auto;
+  grid-template-columns: 1fr minmax(auto, $container-width) 1fr;
+  height: 100vh;
+  grid-gap: $spacing-medium;
+}
+
+.Main {
+  grid-area: content;
+}

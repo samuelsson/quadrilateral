@@ -1,3 +1,25 @@
+@import '../../styles/abstracts/colors';
+@import '../../styles/abstracts/variables';
+
+[data-theme='light'] {
+  --PageHeader-background-color: #{$color-white};
+  --PageHeader-box-shadow: 0 4px 5px #{$color-gray-300};
+}
+
+[data-theme='dark'] {
+  --PageHeader-background-color: #{$color-blue-gray-700};
+  --PageHeader-box-shadow: none;
+}
+
 .PageHeader {
   grid-area: header;
+  background-color: var(--PageHeader-background-color);
+  box-shadow: var(--PageHeader-box-shadow);
+  height: 40px;
+  padding: $spacing-medium;
+}
+
+.floating {
+  border-radius: 5px;
+  margin: $spacing-medium;
 }

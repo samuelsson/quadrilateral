@@ -1,0 +1,28 @@
+@import '../../styles/abstracts/colors';
+
+[data-theme='light'] {
+  --NavItem-background-color: #{$color-white};
+}
+
+[data-theme='dark'] {
+  --NavItem-background-color: #{$color-blue-gray-700};
+}
+
+.NavItem {
+  display: inline;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+
+  a {
+    padding: 6px 0;
+    color: $color-blue-gray-700;
+    text-decoration: none;
+
+    &:hover {
+      padding-bottom: 4px;
+      border-bottom: 2px solid $color-blue;
+      color: $color-blue-gray-900;
+    }
+  }
+}

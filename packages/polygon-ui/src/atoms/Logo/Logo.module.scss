@@ -1,0 +1,13 @@
+@import '../../styles/abstracts/colors';
+@import '../../styles/abstracts/variables';
+
+// Temp styling until we have a real logo ;)
+.Logo {
+  display: flex;
+  align-items: center;
+  padding: 0 $spacing-medium;
+  height: 100%;
+  background-color: $color-blue;
+  color: $color-white;
+  box-sizing: border-box;
+}

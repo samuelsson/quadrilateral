@@ -3,7 +3,7 @@
 
 [data-theme='light'] {
   --PageHeader-background-color: #{$color-white};
-  --PageHeader-box-shadow: 0 4px 5px #{$color-gray-300};
+  --PageHeader-box-shadow: 0 3px 6px #{$color-gray-300};
 }
 
 [data-theme='dark'] {
@@ -13,6 +13,10 @@
 
 .PageHeader {
   grid-area: header;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: $spacing-medium;
   background-color: var(--PageHeader-background-color);
   box-shadow: var(--PageHeader-box-shadow);
   height: 40px;

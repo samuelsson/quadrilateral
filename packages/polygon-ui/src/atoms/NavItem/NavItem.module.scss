@@ -15,14 +15,7 @@
   list-style-type: none;
 
   a {
-    padding: 6px 0;
     color: $color-blue-gray-700;
     text-decoration: none;
-
-    &:hover {
-      padding-bottom: 4px;
-      border-bottom: 2px solid $color-blue;
-      color: $color-blue-gray-900;
-    }
   }
 }

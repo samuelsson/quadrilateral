@@ -5,6 +5,7 @@ import commonjs from '@rollup/plugin-commonjs';
 import typescript from 'rollup-plugin-typescript2';
 import postcss from 'rollup-plugin-postcss';
 import copy from 'rollup-plugin-copy';
+import image from '@rollup/plugin-image';
 import { renderSync } from 'node-sass';
 import pkg from './package.json';
 
@@ -28,6 +29,7 @@ export default {
     commonjs(),
     typescript({ useTsconfigDeclarationDir: true }),
     postcss(),
+    image(),
     copy({
       targets: [
         {

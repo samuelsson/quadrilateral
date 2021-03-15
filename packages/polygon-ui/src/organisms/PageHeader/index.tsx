@@ -5,18 +5,28 @@ import NavBar from '../../molecules/NavBar';
 import Logo from '../../atoms/Logo';
 
 export interface PageHeaderProps {
-  floating?: boolean;
   navItems: JSX.Element[];
+  floating?: boolean;
+  fluid?: boolean;
+  logoLink?: string;
 }
 
-const PageHeader = ({ floating, navItems }: PageHeaderProps): JSX.Element => {
+const PageHeader = ({
+  navItems,
+  floating,
+  fluid,
+  logoLink,
+}: PageHeaderProps): JSX.Element => {
   const floatingClass = floating && styles.floating;
+  const fluidClass = fluid && styles.fluid;
 
   return (
     <header className={cn(styles.PageHeader, floatingClass)}>
-      <Logo />
-      <NavBar navItems={navItems} />
-      <div>user/login</div>
+      <div className={cn(styles.container, fluidClass)}>
+        <Logo link={logoLink} />
+        <NavBar navItems={navItems} />
+        <div>user/login</div>
+      </div>
     </header>
   );
 };

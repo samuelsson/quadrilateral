@@ -1,11 +1,11 @@
 @import '../../styles/abstracts/colors';
 
 [data-theme='light'] {
-  --NavItem-background-color: #{$color-white};
+  --NavItem-color: #{$color-blue-gray-700};
 }
 
 [data-theme='dark'] {
-  --NavItem-background-color: #{$color-blue-gray-700};
+  --NavItem-color: #{$color-gray-300};
 }
 
 .NavItem {
@@ -15,7 +15,7 @@
   list-style-type: none;
 
   a {
-    color: $color-blue-gray-700;
+    color: var(--NavItem-color);
     text-decoration: none;
   }
 }

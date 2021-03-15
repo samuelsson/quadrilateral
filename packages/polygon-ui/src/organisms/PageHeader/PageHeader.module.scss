@@ -13,14 +13,26 @@
 
 .PageHeader {
   grid-area: header;
+  gap: $spacing-medium;
+  height: 70px;
+  background-color: var(--PageHeader-background-color);
+  box-shadow: var(--PageHeader-box-shadow);
+}
+
+.container {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: $spacing-medium;
-  background-color: var(--PageHeader-background-color);
-  box-shadow: var(--PageHeader-box-shadow);
-  height: 40px;
+  height: 100%;
+  max-width: $container-width;
+  margin: 0 auto;
   padding: $spacing-medium;
+  box-sizing: border-box;
+}
+
+.fluid {
+  max-width: none;
+  padding: $spacing-medium $spacing-large;
 }
 
 .floating {

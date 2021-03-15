@@ -19,7 +19,7 @@ export default {
     navItems,
   },
   argTypes: {
-    ...hideControls(['navItems']),
+    ...hideControls(['navItems', 'logoLink']),
   },
 } as Meta;
 

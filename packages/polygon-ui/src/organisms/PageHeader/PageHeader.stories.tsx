@@ -1,6 +1,7 @@
 /* eslint-disable react/jsx-props-no-spreading */
 import * as React from 'react';
 import { Meta, Story } from '@storybook/react';
+import { action } from '@storybook/addon-actions';
 import PageHeader, { PageHeaderProps } from '.';
 import { hideControls } from '../../helpers/storybookHelper';
 
@@ -17,9 +18,10 @@ export default {
   parameters: { layout: 'fullscreen' },
   args: {
     navItems,
+    onUserInfoClick: action('onUserInfoClick'),
   },
   argTypes: {
-    ...hideControls(['navItems', 'logoLink']),
+    ...hideControls(['navItems', 'logoLink', 'onUserInfoClick']),
   },
 } as Meta;
 

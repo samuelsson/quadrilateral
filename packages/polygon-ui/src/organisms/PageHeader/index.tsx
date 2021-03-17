@@ -3,9 +3,12 @@ import cn from 'classnames';
 import styles from './PageHeader.module.scss';
 import NavBar from '../../molecules/NavBar';
 import Logo from '../../atoms/Logo';
+import UserInfo from '../../molecules/UserInfo';
 
 export interface PageHeaderProps {
   navItems: JSX.Element[];
+  username?: string;
+  onUserInfoClick: () => void;
   floating?: boolean;
   fluid?: boolean;
   logoLink?: string;
@@ -13,9 +16,11 @@ export interface PageHeaderProps {
 
 const PageHeader = ({
   navItems,
+  username,
   floating,
   fluid,
   logoLink,
+  onUserInfoClick,
 }: PageHeaderProps): JSX.Element => {
   const floatingClass = floating && styles.floating;
   const fluidClass = fluid && styles.fluid;
@@ -25,7 +30,11 @@ const PageHeader = ({
       <div className={cn(styles.container, fluidClass)}>
         <Logo link={logoLink} />
         <NavBar navItems={navItems} />
-        <div>user/login</div>
+        {username ? (
+          <UserInfo username={username} onClickCallback={onUserInfoClick} />
+        ) : (
+          <span>login</span>
+        )}
       </div>
     </header>
   );

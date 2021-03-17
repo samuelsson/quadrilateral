@@ -7,6 +7,7 @@ export * from './atoms/Heading';
 // Molecules
 export { default as FormInput } from './molecules/FormInput';
 export { default as NavBar } from './molecules/NavBar';
+export { default as UserInfo } from './molecules/UserInfo';
 
 // Organisms
 export { default as PageHeader } from './organisms/PageHeader';

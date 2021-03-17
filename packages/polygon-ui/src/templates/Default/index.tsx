@@ -2,7 +2,7 @@ import React from 'react';
 import styles from './Default.module.scss';
 
 export interface DefaultTemplateProps {
-  children: JSX.Element;
+  children: React.ReactNode;
   header: JSX.Element;
   footer?: JSX.Element;
 }

@@ -1,8 +1,9 @@
 import React from 'react';
 import { NextPage } from 'next';
+import Layout from '../components/Layout';
 
 const IndexPage: NextPage = () => {
-  return <div>Next.js works :)</div>;
+  return <Layout>Next.js works :)</Layout>;
 };
 
 export default IndexPage;

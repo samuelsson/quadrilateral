@@ -1,7 +1,8 @@
 import { NextApiRequest, NextApiResponse } from 'next';
-import NextAuth, { Callbacks, InitOptions, JWTOptions } from 'next-auth';
+import NextAuth, { CallbacksOptions } from 'next-auth';
 import jsonwebtoken, { SignOptions, VerifyOptions } from 'jsonwebtoken';
-import Providers from 'next-auth/providers';
+import Providers, { Providers as ProvidersType } from 'next-auth/providers';
+import { JWTOptions } from 'next-auth/jwt';
 import axios from 'axios';
 
 interface User {
@@ -18,21 +19,15 @@ interface LoginResponse {
   };
 }
 
-interface JwtEncodeParams {
-  secret: string;
-  token: User;
-  maxAge: number;
-}
-
-interface JwtDecodeParams {
-  secret: string;
-  token: string;
-}
-
-const providers = [
+const providers: ProvidersType = [
   Providers.Credentials({
     name: 'Credentials',
     credentials: {},
+    protection: [],
+    // Types for NextAuth have an hard coded User Type, so our custom one
+    // doesn't work. Will probably be changed into a generic sometime.
+    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+    // @ts-ignore
     authorize: async (credentials): Promise<User | null> => {
       const url = process.env.API_URL || '';
       const body = {
@@ -75,8 +70,9 @@ const providers = [
   }),
 ];
 
-const callbacks: Callbacks = {
-  // Types for NextAuth have an hard coded user object, should be changed.
+const callbacks: CallbacksOptions = {
+  // Types for NextAuth have an hard coded User Type, so our custom one
+  // doesn't work. Will probably be changed into a generic sometime.
   // eslint-disable-next-line @typescript-eslint/ban-ts-comment
   // @ts-ignore
   async session(session, user: User) {
@@ -89,6 +85,10 @@ const callbacks: Callbacks = {
       },
     };
   },
+  // Types for NextAuth have an hard coded User Type, so our custom one
+  // doesn't work. Will probably be changed into a generic sometime.
+  // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+  // @ts-ignore
   async jwt(token, user) {
     if (user) {
       return user;
@@ -99,11 +99,11 @@ const callbacks: Callbacks = {
 };
 
 const jwt: JWTOptions = {
-  encode: async ({ secret, token, maxAge }: JwtEncodeParams) => {
+  encode: async ({ secret, token, maxAge }) => {
     const jwtClaims = {
       id: token?.id,
-      roles: token.roles,
-      username: token.username,
+      roles: token?.roles,
+      username: token?.username,
     };
 
     const options: SignOptions = {
@@ -112,7 +112,11 @@ const jwt: JWTOptions = {
     };
     return jsonwebtoken.sign(jwtClaims, secret, options);
   },
-  decode: async ({ secret, token }: JwtDecodeParams): Promise<User> => {
+  // Types for NextAuth have an hard coded User Type, so our custom one
+  // doesn't work. Will probably be changed into a generic sometime.
+  // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+  // @ts-ignore
+  decode: async ({ secret, token }): Promise<User> => {
     const options: VerifyOptions = {
       algorithms: ['HS512'],
     };
@@ -123,12 +127,14 @@ const jwt: JWTOptions = {
   },
 };
 
-const options: InitOptions = {
+const options = {
   providers,
   callbacks,
   secret: process.env.JWT_SECRET,
   jwt,
 };
 
-export default (req: NextApiRequest, res: NextApiResponse): Promise<void> =>
-  NextAuth(req, res, options);
+export default (
+  req: NextApiRequest,
+  res: NextApiResponse
+): void | Promise<void> => NextAuth(req, res, options);

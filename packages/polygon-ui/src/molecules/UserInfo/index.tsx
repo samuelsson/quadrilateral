@@ -3,15 +3,11 @@ import styles from './UserInfo.module.scss';
 
 export interface UserInfoProps {
   username: string;
-  onClickCallback: () => void;
 }
 
-const UserInfo = ({
-  onClickCallback,
-  username,
-}: UserInfoProps): JSX.Element => {
+const UserInfo = ({ username }: UserInfoProps): JSX.Element => {
   return (
-    <button type="button" className={styles.UserInfo} onClick={onClickCallback}>
+    <button type="button" className={styles.UserInfo}>
       {username}
     </button>
   );

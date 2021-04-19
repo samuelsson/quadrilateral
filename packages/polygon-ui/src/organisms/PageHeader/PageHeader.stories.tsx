@@ -18,10 +18,9 @@ export default {
   parameters: { layout: 'fullscreen' },
   args: {
     navItems,
-    onUserInfoClick: action('onUserInfoClick'),
   },
   argTypes: {
-    ...hideControls(['navItems', 'logoLink', 'onUserInfoClick']),
+    ...hideControls(['navItems', 'logoLink']),
   },
 } as Meta;
 

@@ -1,7 +1,6 @@
 /* eslint-disable react/jsx-props-no-spreading */
 import * as React from 'react';
 import { Meta, Story } from '@storybook/react';
-import { action } from '@storybook/addon-actions';
 import PageHeader, { PageHeaderProps } from '.';
 import { hideControls } from '../../helpers/storybookHelper';
 

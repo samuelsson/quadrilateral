@@ -3,6 +3,45 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.8.0 (2021-04-21)
+
+
+### Bug Fixes
+
+* 🐛 ignore 3rd party TS lib check and fix linting errors ([9b91eb2](https://github.com/samuelsson/quadrilateral/commit/9b91eb280c58a5e272ec40a863da3acddef6fc1f))
+* 🐛 make tsconfig and package.json build TS files correctly ([81e9118](https://github.com/samuelsson/quadrilateral/commit/81e911890d5c20b1e5cf91f3dd53d1fb1a8234d5))
+
+
+### chore
+
+* 🤖 bump all packages to latest ([ae6fa1c](https://github.com/samuelsson/quadrilateral/commit/ae6fa1cacd4045704001aaabbd7be94b3624b02a))
+
+
+### Features
+
+* 🎸 add an eslint-config for TypeScript ([be34160](https://github.com/samuelsson/quadrilateral/commit/be341606fb886e1b4707bf497dbea09b3a076e66))
+* 🎸 add default template and base for header and footer ([5b4348b](https://github.com/samuelsson/quadrilateral/commit/5b4348b4438a790910d09459cfa41aae03e25da7))
+* 🎸 add heading components ([10531a9](https://github.com/samuelsson/quadrilateral/commit/10531a918cbbe9e78a3af9b0899a314adeee47bb))
+* 🎸 add input component ([bda71e0](https://github.com/samuelsson/quadrilateral/commit/bda71e0dc93bbe9b44bdc9336893918bb413fd18))
+* 🎸 add label atom and new input molecule ([9d46a98](https://github.com/samuelsson/quadrilateral/commit/9d46a98e0be2d66ba5b27b16cb90d0055d15b61a))
+* 🎸 add logged in view in page header ([e5cdb6a](https://github.com/samuelsson/quadrilateral/commit/e5cdb6ac60fc19744f4285355d2dd0fa553a3d4a))
+* 🎸 add navigation bar for use in header ([fc39482](https://github.com/samuelsson/quadrilateral/commit/fc3948246525603cc824cec28fb7a8fba10e6e76))
+* 🎸 add support for onChange on input fields ([d0688fa](https://github.com/samuelsson/quadrilateral/commit/d0688faff1abe6e6b7c634f1cab002fe6ce5015d))
+* 🎸 add theme support to polygon-ui ([51f25aa](https://github.com/samuelsson/quadrilateral/commit/51f25aa49e44cc52cf68042aab758e7939cd9006))
+* 🎸 add working buttons to ButtonComponent ([8f3ff33](https://github.com/samuelsson/quadrilateral/commit/8f3ff33a88af3f1a8adfa04ae5a1b1bbc52117e1))
+* 🎸 bump packages to latest ([e156561](https://github.com/samuelsson/quadrilateral/commit/e156561f9486ab8a052d0e451a199e6265f4d676))
+* 🎸 switch from styled-components to css modules and ([1df8488](https://github.com/samuelsson/quadrilateral/commit/1df8488116467e5b02f0daf26c2f87fd1ec15253))
+* 🎸 update eslint node config with new rules and settings ([031f51c](https://github.com/samuelsson/quadrilateral/commit/031f51c601c1b285505c27a9a1c7d573cc12af05))
+
+
+### BREAKING CHANGES
+
+* 🧨 Major version bump in dependencies
+
+
+
+
+
 # [0.7.0](https://github.com/Rektangel/quadrilateral/compare/@rektangel/polygon-ui@0.6.0...@rektangel/polygon-ui@0.7.0) (2020-10-30)
 
 

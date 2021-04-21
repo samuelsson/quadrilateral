@@ -3,6 +3,40 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 1.6.0 (2021-04-21)
+
+
+### Bug Fixes
+
+* 🐛 add new rule for fixing no-use-before-define ([3417deb](https://github.com/samuelsson/quadrilateral/commit/3417deb1db0973464aaa5f5398c2d8ee5bfa3328)), closes [/github.com/typescript-eslint/typescript-eslint/issues/2502#issuecomment-689595020](https://github.com//github.com/typescript-eslint/typescript-eslint/issues/2502/issues/issuecomment-689595020)
+* 🐛 disable eslint no-shadow base rule ([d13e9e2](https://github.com/samuelsson/quadrilateral/commit/d13e9e223c90641c2bc078f05a682b0e05c9e252))
+* 🐛 improve some dependencies prior to package publishing ([e76679f](https://github.com/samuelsson/quadrilateral/commit/e76679f7e899d9eae7450e4e208d7f041a99c08d))
+* 🐛 make all eslint dependencies get correct scope ([97c7599](https://github.com/samuelsson/quadrilateral/commit/97c75994eafa9fb18314501ac46e12f6810bac6b))
+* 🐛 make eslint peerDependencis work in a correct way ([49ed624](https://github.com/samuelsson/quadrilateral/commit/49ed624fc13987966021f401f1415779640443e8))
+
+
+### chore
+
+* 🤖 bump all packages to latest ([ae6fa1c](https://github.com/samuelsson/quadrilateral/commit/ae6fa1cacd4045704001aaabbd7be94b3624b02a))
+
+
+### Features
+
+* 🎸 add an eslint-config for TypeScript ([be34160](https://github.com/samuelsson/quadrilateral/commit/be341606fb886e1b4707bf497dbea09b3a076e66))
+* 🎸 add config file for node projects in typescript ([3ad5c40](https://github.com/samuelsson/quadrilateral/commit/3ad5c40dddd5ab51cc7970b4350dce0f4d1a692b))
+* 🎸 bump packages to latest ([e156561](https://github.com/samuelsson/quadrilateral/commit/e156561f9486ab8a052d0e451a199e6265f4d676))
+* 🎸 non-required prop-types don't need default props ([2052e2b](https://github.com/samuelsson/quadrilateral/commit/2052e2b825f5d2d880a4596f54569353a10e9dfe))
+* 🎸 update eslint node config with new rules and settings ([031f51c](https://github.com/samuelsson/quadrilateral/commit/031f51c601c1b285505c27a9a1c7d573cc12af05))
+
+
+### BREAKING CHANGES
+
+* 🧨 Major version bump in dependencies
+
+
+
+
+
 ## [1.5.1](https://github.com/Rektangel/quadrilateral/compare/@rektangel/eslint-config@1.5.0...@rektangel/eslint-config@1.5.1) (2020-10-30)
 
 **Note:** Version bump only for package @rektangel/eslint-config

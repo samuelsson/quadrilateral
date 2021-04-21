@@ -1,6 +1,6 @@
 {
   "name": "@samuelsson/eslint-config",
-  "version": "1.5.1",
+  "version": "1.6.0",
   "description": "eslint and prettier config for quadrilateral projects, and other",
   "main": "index.js",
   "files": [

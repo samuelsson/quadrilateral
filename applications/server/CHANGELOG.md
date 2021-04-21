@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.7.0](https://github.com/samuelsson/quadrilateral/compare/linje-server@0.6.1...linje-server@0.7.0) (2021-04-21)
+
+
+### Features
+
+* 🎸 add login functionality with session tokens ([437ff62](https://github.com/samuelsson/quadrilateral/commit/437ff629317e39e8f212cc0283001909661fe318))
+* 🎸 use username instead of email as unique identifier ([31d29c4](https://github.com/samuelsson/quadrilateral/commit/31d29c45c82c034ba3aea5a8062b19a8dd29578b))
+
+
+
+
+
 ## [0.6.1](https://github.com/Rektangel/quadrilateral/compare/linje-server@0.6.0...linje-server@0.6.1) (2020-10-30)
 
 **Note:** Version bump only for package linje-server

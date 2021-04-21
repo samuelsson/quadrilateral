@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.4.0](https://github.com/samuelsson/quadrilateral/compare/linje-web@0.3.1...linje-web@0.4.0) (2021-04-21)
+
+
+### Features
+
+* 🎸 add default template and base for header and footer ([5b4348b](https://github.com/samuelsson/quadrilateral/commit/5b4348b4438a790910d09459cfa41aae03e25da7))
+* 🎸 add login functionality with session tokens ([437ff62](https://github.com/samuelsson/quadrilateral/commit/437ff629317e39e8f212cc0283001909661fe318))
+
+
+
+
+
 ## [0.3.1](https://github.com/Rektangel/quadrilateral/compare/linje-web@0.3.0...linje-web@0.3.1) (2020-10-30)
 
 **Note:** Version bump only for package linje-web

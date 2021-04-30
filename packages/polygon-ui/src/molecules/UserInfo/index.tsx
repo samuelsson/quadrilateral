@@ -1,16 +1,13 @@
 import React from 'react';
-import styles from './UserInfo.module.scss';
 
 export interface UserInfoProps {
-  username: string;
+  username?: string;
 }
 
 const UserInfo = ({ username }: UserInfoProps): JSX.Element => {
-  return (
-    <button type="button" className={styles.UserInfo}>
-      {username}
-    </button>
-  );
+  const isLoggedIn = !!username;
+
+  return isLoggedIn ? <span>{username}</span> : <a href="/login">login</a>;
 };
 
 export default UserInfo;

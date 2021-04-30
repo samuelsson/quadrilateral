@@ -7,7 +7,7 @@
 }
 
 [data-theme='dark'] {
-  --PageHeader-background-color: #{$color-blue-gray-700};
+  --PageHeader-background-color: #{$color-black};
   --PageHeader-box-shadow: none;
 }
 
@@ -19,6 +19,15 @@
   box-shadow: var(--PageHeader-box-shadow);
 }
 
+.Logo {
+  height: 100%;
+
+  img {
+    height: 100%;
+    width: auto;
+  }
+}
+
 .container {
   display: flex;
   align-items: center;
@@ -28,14 +37,4 @@
   margin: 0 auto;
   padding: $spacing-medium;
   box-sizing: border-box;
-}
-
-.fluid {
-  max-width: none;
-  padding: $spacing-medium $spacing-large;
-}
-
-.floating {
-  border-radius: 5px;
-  margin: $spacing-medium;
 }

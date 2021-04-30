@@ -10,7 +10,6 @@ export interface InputProps {
   id?: string;
   disabled?: boolean;
   error?: boolean;
-  placeholder?: string;
 }
 
 const Input = ({
@@ -21,7 +20,6 @@ const Input = ({
   id,
   disabled,
   error,
-  placeholder,
 }: InputProps): JSX.Element => {
   const [val, setVal] = React.useState<string>(value || '');
 
@@ -47,7 +45,6 @@ const Input = ({
       id={id}
       onChange={internalOnChange}
       disabled={disabled}
-      placeholder={placeholder}
       className={cn(styles.Input, error && styles.Error)}
     />
   );

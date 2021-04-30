@@ -1,29 +1,22 @@
 @import '../../styles/abstracts/colors';
 
 [data-theme='light'] {
-  --Button-background-color: #{$color-blue-gray-800};
+  --Button-background-color: #{$color-black};
   --Button-color: #{$color-white};
 }
 
 [data-theme='dark'] {
-  --Button-background-color: #{$color-blue-gray-100};
-  --Button-color: #{$color-blue-gray-800};
+  --Button-background-color: #{$color-white};
+  --Button-color: #{$color-black};
 }
 
 .Button {
   height: 48px;
   border: 0;
   padding: 0 2rem;
-  border-radius: 5px;
-  font-weight: bold;
   background-color: var(--Button-background-color);
   color: var(--Button-color);
   text-decoration: none;
-  text-transform: uppercase;
-
-  transition-property: background, border, color, box-shadow;
-  transition-timing-function: linear;
-  transition-duration: 0.2s;
 
   &:hover:not(:disabled),
   &:focus:not(:disabled),

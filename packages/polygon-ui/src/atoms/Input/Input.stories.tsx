@@ -12,7 +12,6 @@ export default {
     name: 'input',
     type: 'text',
     onChange: action('Input changed'),
-    placeholder: 'Placeholder',
   },
   argTypes: {
     type: {

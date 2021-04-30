@@ -1,4 +1,32 @@
+@import '../../styles/abstracts/colors';
 @import '../../styles/abstracts/variables';
+
+[data-theme='light'] {
+  --NavItem-color: #{$color-black};
+}
+
+[data-theme='dark'] {
+  --NavItem-color: #{$color-white};
+}
+
+.NavItem {
+  display: inline;
+  margin: 0;
+  padding: 0;
+  text-transform: uppercase;
+  list-style-type: none;
+
+  a {
+    padding: 8px 0;
+    color: var(--NavItem-color);
+    text-decoration: none;
+
+    &:hover {
+      padding-bottom: 5px;
+      border-bottom: 3px solid $color-blue;
+    }
+  }
+}
 
 .NavBar {
   display: inline-flex;

@@ -1,0 +1,7 @@
+@import '../../styles/abstracts/variables';
+
+.Form {
+ > *:not(:last-child) {
+   margin-bottom: $spacing-medium;
+ }
+}

@@ -1,29 +1,32 @@
 import React from 'react';
 import { NextPage } from 'next';
-import { Button, FormInput } from '@samuelsson/polygon-ui';
+import { Button, Form, FormInput } from '@samuelsson/polygon-ui';
+import Layout from '../components/Layout';
 import useAuth from '../hooks/useAuth';
 
 const LoginPage: NextPage = () => {
   const [{ handleLogin, handleInputChange }] = useAuth();
 
   return (
-    <form onSubmit={handleLogin}>
-      <FormInput
-        name="username"
-        type="text"
-        label="Username"
-        onChange={handleInputChange}
-      />
-      <FormInput
-        name="password"
-        type="password"
-        label="Password"
-        onChange={handleInputChange}
-      />
-      <Button type="submit" name="login">
-        Login
-      </Button>
-    </form>
+    <Layout>
+      <Form onSubmit={handleLogin}>
+        <FormInput
+          name="username"
+          type="text"
+          label="Username"
+          onChange={handleInputChange}
+        />
+        <FormInput
+          name="password"
+          type="password"
+          label="Password"
+          onChange={handleInputChange}
+        />
+        <Button type="submit" name="login" fluid>
+          Login
+        </Button>
+      </Form>
+    </Layout>
   );
 };
 

@@ -1,4 +1,5 @@
 import React from 'react';
+import cn from 'classnames';
 import styles from './Button.module.scss';
 
 export interface ButtonProps {
@@ -7,6 +8,7 @@ export interface ButtonProps {
   onClick?: () => void;
   type?: 'button' | 'submit' | 'reset';
   disabled?: boolean;
+  fluid?: boolean;
 }
 
 const Button = ({
@@ -15,6 +17,7 @@ const Button = ({
   onClick,
   type,
   disabled,
+  fluid,
 }: ButtonProps): JSX.Element => (
   <button
     // eslint-disable-next-line react/button-has-type
@@ -22,7 +25,7 @@ const Button = ({
     name={name}
     onClick={onClick}
     disabled={disabled}
-    className={styles.Button}
+    className={cn(styles.Button, !!fluid && styles.fluid)}
   >
     {children}
   </button>

@@ -9,6 +9,7 @@ export { default as NavBar } from './molecules/NavBar';
 export { default as UserInfo } from './molecules/UserInfo';
 
 // Organisms
+export { default as Form } from './organisms/Form';
 export { default as PageHeader } from './organisms/PageHeader';
 export { default as PageFooter } from './organisms/PageFooter';
 

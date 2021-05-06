@@ -12,6 +12,7 @@
 
 .Input {
   height: 48px;
+  width: 100%;
   padding: 0 16px;
   border: 2px solid;
   border-color: var(--Input-border-color);
@@ -22,6 +23,7 @@
 
   &:focus:not(:disabled),
   &:active:not(:disabled) {
+    outline: none;
     border-color: $color-blue;
   }
 

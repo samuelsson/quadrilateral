@@ -1,6 +1,6 @@
 import React from 'react';
-import type { AppProps } from 'next/app';
 import { Provider } from 'next-auth/client';
+import type { AppProps } from 'next/app';
 import 'normalize.css';
 import '@samuelsson/polygon-ui/dist/styles/global.css';
 

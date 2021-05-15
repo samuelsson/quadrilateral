@@ -5,7 +5,7 @@ import Layout from '../components/Layout';
 import useAuth from '../hooks/useAuth';
 
 const LoginPage: NextPage = () => {
-  const [{ handleLogin, handleInputChange }] = useAuth();
+  const [{ isLoading }, { handleLogin, handleInputChange }] = useAuth();
 
   return (
     <Layout>
@@ -22,7 +22,7 @@ const LoginPage: NextPage = () => {
           label="Password"
           onChange={handleInputChange}
         />
-        <Button type="submit" name="login" fluid>
+        <Button type="submit" name="login" disabled={isLoading} fluid>
           Login
         </Button>
       </Form>

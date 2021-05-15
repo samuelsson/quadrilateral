@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.5.0](https://github.com/samuelsson/quadrilateral/compare/linje-web@0.4.1...linje-web@0.5.0) (2021-05-15)
+
+
+### Features
+
+* 🎸 add a form wrapper component ([90bbff9](https://github.com/samuelsson/quadrilateral/commit/90bbff9524c4631cd58288172bcafa0f091bbb92))
+
+
+
+
+
 ## [0.4.1](https://github.com/samuelsson/quadrilateral/compare/linje-web@0.4.0...linje-web@0.4.1) (2021-04-30)
 
 **Note:** Version bump only for package linje-web

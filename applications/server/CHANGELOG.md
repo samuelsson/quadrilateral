@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.7.2](https://github.com/samuelsson/quadrilateral/compare/linje-server@0.7.1...linje-server@0.7.2) (2021-05-15)
+
+**Note:** Version bump only for package linje-server
+
+
+
+
+
 ## [0.7.1](https://github.com/samuelsson/quadrilateral/compare/linje-server@0.7.0...linje-server@0.7.1) (2021-04-30)
 
 **Note:** Version bump only for package linje-server

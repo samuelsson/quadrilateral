@@ -5,16 +5,7 @@ import Providers, { AppProviders } from 'next-auth/providers';
 import { JWTOptions } from 'next-auth/jwt';
 import axios from 'axios';
 
-interface Credentials {
-  username: string;
-  password: string;
-}
-
-interface User {
-  id: string;
-  roles: string[];
-  username: string;
-}
+import { MutationLoginArgs, User } from '../../../types/graphql';
 
 interface LoginResponse {
   data: {
@@ -27,13 +18,7 @@ interface LoginResponse {
 const providers: AppProviders = [
   Providers.Credentials({
     name: 'Credentials',
-    credentials: {},
-    protection: [],
-    // Types for NextAuth has an hard-coded User Type, so our custom one
-    // doesn't work. Will probably be changed into a generic sometime.
-    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-    // @ts-ignore
-    authorize: async (credentials: Credentials): Promise<User | null> => {
+    authorize: async (credentials: MutationLoginArgs): Promise<User | null> => {
       const url = process.env.API_URL || '';
       const body = {
         query: `

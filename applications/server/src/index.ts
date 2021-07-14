@@ -1,5 +1,6 @@
 import 'reflect-metadata';
 import express, { Request } from 'express';
+import session from 'express-session';
 import { graphqlHTTP } from 'express-graphql';
 import { buildSchema } from 'type-graphql';
 import { connect } from 'mongoose';
@@ -33,6 +34,14 @@ async function init(): Promise<void> {
     cors({
       origin: process.env.ALLOW_ORIGIN,
       credentials: true,
+    })
+  );
+
+  await app.use(
+    session({
+      secret: 'test',
+      resave: false,
+      saveUninitialized: true,
     })
   );
 

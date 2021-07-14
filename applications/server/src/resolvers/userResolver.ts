@@ -2,6 +2,7 @@
 /* eslint-disable max-classes-per-file */
 import {
   Arg,
+  Authorized,
   Ctx,
   Field,
   Mutation,
@@ -72,6 +73,7 @@ class UserResolver {
   }
 
   @Query((returns) => User)
+  @Authorized()
   async profile(@Ctx() ctx: Context): Promise<User> {
     if (!ctx?.user?.id) {
       throw new Error('Not found');

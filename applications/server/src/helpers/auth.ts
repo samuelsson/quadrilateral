@@ -20,6 +20,8 @@ export const getTokenFromRequest = (req: Request): string | undefined => {
   const tokenRegex = /next-auth\.session-token=(\S+)/;
   const cookie = req.get('cookie');
 
+  console.log(req.session);
+
   if (!!cookie && cookie.match(tokenRegex)?.length) {
     return cookie.match(tokenRegex)?.[1];
   }

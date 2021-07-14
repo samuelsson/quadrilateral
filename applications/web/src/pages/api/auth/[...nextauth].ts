@@ -5,13 +5,11 @@ import Providers, { AppProviders } from 'next-auth/providers';
 import { JWTOptions } from 'next-auth/jwt';
 import axios from 'axios';
 
-import { MutationLoginArgs, User } from '../../../types/graphql';
+import { AuthResponse, MutationLoginArgs, User } from '../../../types/graphql';
 
 interface LoginResponse {
   data: {
-    login: {
-      user: User;
-    };
+    login: AuthResponse;
   };
 }
 
@@ -29,6 +27,7 @@ const providers: AppProviders = [
                 roles,
                 username,
               }
+              token
             }
           }
         `,

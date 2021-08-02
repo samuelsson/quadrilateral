@@ -1,6 +1,9 @@
 module.exports = {
   stories: ['../src/**/*.stories.@(ts|tsx)'],
   // logLevel: 'debug',
+  features: {
+    postcss: false,
+  },
   addons: [
     {
       name: '@storybook/preset-scss',

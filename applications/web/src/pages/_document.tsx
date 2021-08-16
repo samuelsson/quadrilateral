@@ -5,8 +5,8 @@ import Document, {
   Main,
   NextScript,
   DocumentContext,
+  DocumentInitialProps,
 } from 'next/document';
-import { DocumentInitialProps } from 'next/dist/next-server/lib/utils';
 
 class MyDocument extends Document {
   static async getInitialProps(

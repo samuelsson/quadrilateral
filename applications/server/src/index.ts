@@ -20,11 +20,7 @@ async function init(): Promise<void> {
   });
 
   // create mongoose connection
-  const mongoose = await connect(`mongodb://${DB_HOST}:${DB_PORT}/${DB_NAME}`, {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-    useCreateIndex: true,
-  });
+  const mongoose = await connect(`mongodb://${DB_HOST}:${DB_PORT}/${DB_NAME}`);
   await mongoose.connection;
 
   const app = express();

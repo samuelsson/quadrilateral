@@ -1,6 +1,6 @@
 {
   "name": "linje-server",
-  "version": "0.7.2",
+  "version": "0.7.3",
   "description": "API back-end for linje",
   "main": "index.js",
   "author": "@ErikSamuelsson",

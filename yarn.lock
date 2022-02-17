@@ -3136,6 +3136,11 @@
     estree-walker "^2.0.1"
     picomatch "^2.2.2"
 
+"@samuelsson/eslint-config@^1.6.3":
+  version "1.6.3"
+  resolved "https://registry.yarnpkg.com/@samuelsson/eslint-config/-/eslint-config-1.6.3.tgz#a3c5c9075d1cd5ad01590e022314337235269b39"
+  integrity sha512-X43sYslOrzlq97wYpVzJKUjO7sClKXC/tt58TwXqnlpT5Pgx2KKi3HO2FhlqREjL1vmiQATHX60A9f4ljBnSTg==
+
 "@samverschueren/stream-to-observable@^0.3.0":
   version "0.3.1"
   resolved "https://registry.yarnpkg.com/@samverschueren/stream-to-observable/-/stream-to-observable-0.3.1.tgz#a21117b19ee9be70c379ec1877537ef2e1c63301"

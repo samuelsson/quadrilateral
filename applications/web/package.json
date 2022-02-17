@@ -20,7 +20,7 @@
     "axios": "^0.21.1",
     "http-proxy-middleware": "^2.0.1",
     "jsonwebtoken": "^8.5.1",
-    "next": "^11.1.2",
+    "next": "^12.1.0",
     "next-auth": "^3.29.0",
     "next-urql": "^3.2.1",
     "normalize.css": "^8.0.1",
